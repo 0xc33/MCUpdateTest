@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html class="noselect noScroll" style="background: #1C1C1C;overflow: hidden;--bs-body-color: var(--bs-white);border-color: #231F20;--bs-primary: transparent;--bs-primary-rgb: 0,0,0;" lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=0.8, minimum-scale=0.5 ,maximum-scale=0.8, user-scalable=no, viewport-fit=cover">
+    <title>MotionCenter</title>
+    <meta name="theme-color" content="#1C1C1C">
+    <meta property="og:image" content="/assets/img/LRSplash512x512.png?h=d2cacda5972d2bfe0e590ec3055f2ccc">
+    <meta name="description" content="linrob MotionCenter for Controlling linrob Robots.
+
+Visit www.linrob.io for more Information.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:image" content="/assets/img/LRSplash512x512.png?h=d2cacda5972d2bfe0e590ec3055f2ccc">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/linrob/LR-black.png?h=57619a582a66f12498300d880b31ea21">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/linrob/LR-black.png?h=57619a582a66f12498300d880b31ea21">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/linrob/LR-black.png?h=57619a582a66f12498300d880b31ea21">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/linrob/LR-black.png?h=57619a582a66f12498300d880b31ea21">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/linrob/LR-black.png?h=57619a582a66f12498300d880b31ea21">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?h=d91acbd26c1a01d6126a31e29eb4da5a">
+    <link rel="manifest" href="/manifest.json?h=b85159c40ae7ba2f5188bb2687b4f065">
+    <link rel="stylesheet" href="/assets/css/ABeeZee.css?h=0837d0355bade0e5ffcd981c800f94ff">
+    <link rel="stylesheet" href="/assets/css/Alatsi.css?h=27f7e41eaaae403ee675b5a92a1bf5b8">
+    <link rel="stylesheet" href="/assets/css/Allerta.css?h=38a2520c2c324cf1b0a75404caede695">
+    <link rel="stylesheet" href="/assets/css/Atomic%20Age.css?h=130920d6dbe53f71bd21167b154aad22">
+    <link rel="stylesheet" href="/assets/css/Cookie.css?h=9eb7fca1e114fa0d2991108dc5ff3818">
+    <link rel="stylesheet" href="/assets/css/Lora.css?h=0db9159a7ee96f2283997db78042a631">
+    <link rel="stylesheet" href="/assets/css/Nunito.css?h=bdc7db4ac0c5412acdac745d101e00f1">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome-all.min.css?h=54d09f91e88eea0a052c98a09c02ba2b">
+    <link rel="stylesheet" href="/assets/css/animate.min.css?h=5512c3e92e3931978c9ddcc7dbeed22b">
+    <link rel="stylesheet" href="/assets/css/utils/ScriptList.css?h=2652351077078a75f9f18140947a346b">
+    <link rel="stylesheet" href="/assets/css/3DView/3dBox.css?h=b57a30c72ec0abb27b949fed7b2db94f">
+    <link rel="stylesheet" href="/assets/css/utils/RobotToolbar.css?h=8489403d7e09568999a3326b417b90c4">
+    <link rel="stylesheet" href="/assets/css/ScriptEditor/codemirror.css?h=82fd8803b1dbf2a3f8662c32b86ed4ee">
+    <link rel="stylesheet" href="/assets/css/ScriptEditor/CodeThemes/ayu-dark.css?h=86d1ae1136a876f99670bdd3104ccfe1">
+    <link rel="stylesheet" href="/assets/css/ScriptEditor/dialog.css?h=f01b6a1463250b9b86532917adf2a1cc">
+    <link rel="stylesheet" href="/assets/css/ScriptEditor/Util/show-hint.css?h=1dc5718fdbe69ec05afcc5526b08b542">
+    <link rel="stylesheet" href="/assets/css/ScriptEditor/matchesonscrollbar.css?h=3a318eac04bae75fbbaf5821e00d2497">
+    <link rel="stylesheet" href="/assets/css/utils/animate.min.css?h=2b97443657830eb4479bf86812f86ebf">
+    <link rel="stylesheet" href="/assets/css/utils/ButtonStyles.css?h=a5cff863ffb0c9141f8e27b370a418fe">
+    <link rel="stylesheet" href="/assets/css/utils/jquery-ui.min.css?h=f4b1d8657934791ab819c74e1a8dcabf">
+    <link rel="stylesheet" href="/assets/css/utils/ledLight.css?h=0dff9fe779d1732d70af309a440c7809">
+    <link rel="stylesheet" href="/assets/css/utils/numpad-dark.css?h=ab61c5fedebced908f4f21541b3ba4b4">
+    <link rel="stylesheet" href="/assets/css/utils/slider.css?h=ccf6dfd4e796ee676664b2fb0ae52ebc">
+    <link rel="stylesheet" href="/assets/css/utils/ToastShadow.css?h=b745daa623a0dec1e5bfbde949e2e1df">
+    <link rel="stylesheet" href="/assets/css/ScriptEditor/foldgutter.css?h=9b64126b4863cbf023761373edce7b75">
+    <link rel="stylesheet" href="/assets/css/ScriptEditor/lint.css?h=ea8645b5dd14b304a61dc7442e183e78">
+    <link rel="stylesheet" href="/assets/css/ScriptEditor/simplescrollbars.css?h=fc405a9103a5c7acba03c8c28e98f128">
+    <link rel="stylesheet" href="/assets/css/index.css?h=89900752ed061f752d7112a653941be5">
+    <link rel="stylesheet" href="/assets/css/loadingBar/loading-bar.min.css?h=96b41926ca67eb93789f051d39aa2094">
+    <link rel="stylesheet" href="/assets/css/Notifier/Toastify/toastify.css?h=90c629a780e11a6aeaffdf2ef6799fdb">
+    <link rel="stylesheet" href="/assets/css/Settings/Gamepad%20Settings/selectControllerFunction.css?h=7dc32f73c8ed550d98c13ac79e84556f">
+    <link rel="stylesheet" href="/assets/css/ToastStyles/Toast-Script-Robot.css?h=8a28190ec382de78203942f000c71d92">
+    <link rel="stylesheet" href="/assets/css/utils/Logo.css?h=e04bae306ffa17529f13dbbe88c68944">
+    <link rel="stylesheet" href="/assets/css/utils/OrbitControlsGizmo.css?h=de87d5c9ebc5b6da4be35cce79c1469d">
+</head>
+
+<body class="d-xl-flex flex-wrap justify-content-xl-start align-items-xl-start noselect" style="overflow: hidden;--bs-body-bg: var(--bs-body-bg);background: #1C1C1C;" onload="$(modal_loading_screen).modal(&#39;show&#39;)">
+    <header id="robot_toolbar" class="noselect" style="display: flex;">
+        <div class="d-xxl-flex noselect" id="wrapper" style="--bs-body-bg: var(--bs-dark);background: var(--bs-dark);overflow: hidden;">
+            <div class="d-flex flex-column align-items-center align-items-lg-center justify-content-xxl-start align-items-xxl-center noselect" id="content-wrapper" style="background: var(--bs-body-bg);overflow: hidden;min-height: 100%;">
+                <div class="toast pulse animated noselect z-index-max hide" role="alert" data-bs-animation="false" data-bs-autohide="false" id="toast-script-robot" style="background: var(--bs-gray-900);opacity: 1;border-style: none;border-color: transparent;margin-top: 10em;position: absolute;box-shadow: 0px 0px transparent;height: auto;width: 80%;max-width: 80%;">
+                    <div class="toast-header d-flex d-lg-flex justify-content-start align-items-center justify-content-lg-start align-items-lg-center noselect" id="toast-script-editor-header" style="background: var(--bs-dark);border-style: none;"><img class="me-2" src="/assets/img/linrob/LR-grey.png?h=3158da32ca75dc964812ffeebf7cf79a" width="32px"><strong class="me-auto" id="txt_script_header" style="color: white;">linrob Script Editor</strong><strong id="txt_elapsed_script_time" class="noselect">&nbsp;</strong>
+                        <div data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="right" class="tada animated infinite led-red moveLabel noselect" id="led_script_status" style="position: static;display: inline-block;margin-right: 1vw;margin-left: 1vw;" title="Script Status LED"></div><button class="btn-close btn-close-white ms-2 mb-1 close" id="btn_close_script" data-bs-dismiss="toast"></button>
+                    </div>
+                    <div class="toast-body d-flex d-sm-flex d-md-flex d-lg-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-md-center align-items-md-center justify-content-lg-center align-items-lg-center noselect" role="alert" id="script_editor_toast_body" style="color: rgb(133, 135, 150);border-style: none;box-shadow: 0px 0px transparent;opacity: 1;max-height: 50%;">
+                        <form style="width: 98%;margin-left: 0.5em;max-height: 50%;"><textarea class="form-control noselect wrapper overflow: auto;" id="editor" name="code" style="display: block;opacity: 1;border-style: none;"></textarea></form>
+                    </div>
+                    <div class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-start align-items-start justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-start darkcontainers bkmrker noselect" id="robotToolbarDiv-1" style="background: transparent;border-radius: 21px;opacity: 1;width: 78vw;margin-left: 1vw;margin-bottom: 1vw;"><button id="btn_play_script" class="jogBtn noselect" type="button" style="font-family: Roboto, sans-serif;background: rgba(0,0,0,0.7);border-style: none;border-radius: 11px;width: 12em;margin-top: 0.5vw;margin-bottom: 0.5vw;margin-right: 1vw;margin-left: 1vw;height: 3.5em;" title="Play Script on Robot"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-player-play noselect" style="font-size: 25px;color: #d1d1d1;width: 3vw;margin-right: 1%;height: 3vh;">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M7 4v16l13 -8z"></path>
+                            </svg></button><button id="btn_pause_script" class="jogBtn noselect" type="button" style="font-family: Roboto, sans-serif;background: rgba(0,0,0,0.7);border-style: none;border-radius: 11px;width: 12em;margin-top: 0.5vw;margin-bottom: 0.5vw;margin-right: 1vw;margin-left: 1vw;height: 3.5em;" title="Pause Script on Robot"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-player-pause noselect" id="btn_grid_activate-1" style="font-size: 25px;color: #d1d1d1;width: 3vw;margin-right: 1%;height: 3vh;">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <rect x="6" y="5" width="4" height="14" rx="1"></rect>
+                                <rect x="14" y="5" width="4" height="14" rx="1"></rect>
+                            </svg></button><button id="btn_stop_script" class="jogBtn noselect" type="button" style="font-family: Roboto, sans-serif;background: rgba(0,0,0,0.7);border-style: none;border-radius: 11px;width: 12em;margin-top: 0.5vw;margin-bottom: 0.5vw;margin-right: 1vw;margin-left: 1vw;height: 3.5em;" title="Stop Script on Robot"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-player-stop noselect" style="font-size: 25px;color: #d1d1d1;width: 3vw;margin-right: 1%;height: 3vh;">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <rect x="5" y="5" width="14" height="14" rx="2"></rect>
+                            </svg></button><button id="btn_dropdown_script_save" class="jogBtn noselect" type="button" style="font-family: Roboto, sans-serif;background: rgba(0,0,0,0.7);border-style: none;border-radius: 11px;width: 12em;margin-top: 0.5vw;margin-bottom: 0.5vw;margin-right: 1vw;margin-left: 1vw;height: 3.5em;" title="Save Script"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-upload noselect" style="font-size: 25px;color: #d1d1d1;width: 3vw;margin-right: 1%;height: 3vh;">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
+                                <polyline points="7 9 12 4 17 9"></polyline>
+                                <line x1="12" y1="4" x2="12" y2="16"></line>
+                            </svg></button><button id="btn_dropdown_script_load" class="jogBtn noselect" type="button" style="font-family: Roboto, sans-serif;background: rgba(0,0,0,0.7);border-style: none;border-radius: 11px;width: 12em;margin-top: 0.5vw;margin-bottom: 0.5vw;margin-right: 1vw;margin-left: 1vw;height: 3.5em;" title="Open Script file"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-file-code noselect" style="font-size: 25px;color: #d1d1d1;width: 3vw;margin-right: 1%;height: 3vh;">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                                <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"></path>
+                                <path d="M10 13l-1 2l1 2"></path>
+                                <path d="M14 13l1 2l-1 2"></path>
+                            </svg></button></div>
+                </div>
+                <div class="toast pulse animated noselect z-index-max hide" role="alert" data-bs-animation="false" data-bs-autohide="false" id="toast-robot-settings" style="background: var(--bs-gray-900);opacity: 0.80;border-style: none;border-color: transparent;margin-top: 10em;position: absolute;box-shadow: 0px 0px transparent;height: auto;width: 80%;max-width: 80%;">
+                    <div class="toast-header d-flex d-lg-flex justify-content-start align-items-center justify-content-lg-start align-items-lg-center noselect" id="toast-settings-header" style="background: var(--bs-dark);border-style: none;"><img class="me-2" src="/assets/img/linrob/LR-grey.png?h=3158da32ca75dc964812ffeebf7cf79a" width="32px"><strong class="me-auto" id="txt_settings_header" style="color: white;">linrob MotionCenter Settings</strong><button class="btn-close btn-close-white ms-2 mb-1 close" id="btn_close_settings" data-bs-dismiss="toast"></button></div>
+                    <div class="toast-body d-flex d-sm-flex d-md-flex d-lg-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-md-center align-items-md-center justify-content-lg-center align-items-lg-center noselect" role="alert" style="color: rgb(133, 135, 150);border-style: none;box-shadow: 0px 0px transparent;opacity: 1;max-height: 50%;">
+                        <form style="width: 98%;margin-left: 0.5em;max-height: 50%;">
+                            <div>
+                                <ul class="nav nav-pills nav-justified" role="tablist" style="margin-bottom: 2vh;">
+                                    <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-bs-toggle="pill" href="#tab-1" style="color: var(--bs-nav-pills-link-active-color);">3D-Settings</a></li>
+                                    <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-bs-toggle="pill" href="#tab-2" style="color: var(--bs-nav-pills-link-active-color);">Gamepad Setttings</a></li>
+                                    <li class="nav-item text-capitalize" role="presentation"><a class="nav-link" role="tab" data-bs-toggle="pill" href="#tab-3" style="color: var(--bs-nav-pills-link-active-color);">Robot Log</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane" role="tabpanel" id="tab-1"></div>
+                                    <div class="tab-pane active" role="tabpanel" id="tab-2">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col d-flex justify-content-center align-items-center"><img src="/assets/img/linrob/Gamepad/Controller_Overview_Scale.png?h=b2e55ca0c817d8e5200224cd39a59de4" style="width: 32vh;"></div>
+                                                <div class="col">
+                                                    <div class="input-group d-flex justify-content-center align-items-center" style="background: transparent;"><span class="input-group-text" style="background: var(--bs-dark);border-style: none;border-color: var(--bs-green);"><img src="/assets/img/linrob/Gamepad/Left%20Bumper.svg?h=5e58017a5525cf91768f8ada50be7f0b" style="width: 6vh;"></span><select class="form-select store-state" id="select_gamepad_ls" style="border-style: none;" data-storage-name="gamepadButton_ls"></select></div>
+                                                    <div class="input-group d-flex justify-content-center align-items-center" style="background: transparent;"><span class="input-group-text" style="background: var(--bs-toast-header-border-color);border-style: none;"><img src="/assets/img/linrob/Gamepad/Left%20Trigger.svg?h=d8fafdddc4f955df5d57621fcae8dd47" style="width: 6vh;"></span><select class="form-select store-state" id="select_gamepad_lt" style="border-style: none;" readonly=""></select></div>
+                                                    <div class="input-group d-flex justify-content-center align-items-center" style="background: transparent;"><span class="input-group-text" style="background: var(--bs-toast-header-border-color);border-style: none;"><img src="/assets/img/linrob/Gamepad/A.svg?h=1ccf0f9eeea638bc39f930613051d4c3" style="width: 6vh;"></span><select class="form-select store-state" id="select_gamepad_a" style="border-style: none;" readonly=""></select></div>
+                                                    <div class="input-group d-flex justify-content-center align-items-center" style="background: transparent;"><span class="input-group-text" style="background: var(--bs-toast-header-border-color);border-style: none;"><img src="/assets/img/linrob/Gamepad/X.svg?h=56d79af451b4b4fcc8b9c5a856292ec2" style="width: 6vh;background: var(--bs-toast-header-border-color);"></span><select class="form-select store-state" id="select_gamepad_x" style="border-style: none;" readonly=""></select></div>
+                                                    <div class="input-group d-flex justify-content-center align-items-center" style="background: transparent;"><span class="input-group-text" style="background: var(--bs-toast-header-border-color);border-style: none;"><img src="/assets/img/linrob/Gamepad/Left%20Stick%20Left.svg?h=87fdf9d27f72f92509b0af807a62525e" style="width: 6vh;background: var(--bs-toast-header-border-color);"></span><select class="form-select store-state" id="select_gamepad_left0" style="border-style: none;" readonly=""></select></div>
+                                                    <div class="input-group d-flex justify-content-center align-items-center" style="background: transparent;"><span class="input-group-text" style="background: var(--bs-toast-header-border-color);border-style: none;"><img src="/assets/img/linrob/Gamepad/Left%20Stick%20Up.svg?h=298dc8b4426e3fc1ae860dd313eb519d" style="width: 6vh;background: var(--bs-toast-header-border-color);"></span><select class="form-select store-state" id="select_gamepad_up0" style="border-style: none;" readonly=""></select></div>
+                                                    <div class="input-group d-flex justify-content-center align-items-center" style="background: transparent;"><span class="input-group-text" style="background: var(--bs-toast-header-border-color);border-style: none;"><img src="/assets/img/linrob/Gamepad/Right%20Stick%20Left.svg?h=6c927796cd6c537a23163561f25fb509" style="width: 6vh;background: var(--bs-toast-header-border-color);"></span><select class="form-select store-state" id="select_gamepad_left1" style="border-style: none;" readonly=""></select></div>
+                                                    <div class="input-group d-flex justify-content-center align-items-center" style="background: transparent;"><span class="input-group-text" style="background: var(--bs-toast-header-border-color);border-style: none;"><img src="/assets/img/linrob/Gamepad/Right%20Stick%20Up.svg?h=8889ff56f1e9d8bddeaad52d58b139b1" style="width: 6vh;background: var(--bs-toast-header-border-color);"></span><select class="form-select store-state" id="select_gamepad_up1" style="border-style: none;" readonly=""></select></div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="input-group d-flex justify-content-center align-items-center"><span class="input-group-text" style="background: var(--bs-toast-header-border-color);border-style: none;"><img src="/assets/img/linrob/Gamepad/Right%20Bumper.svg?h=24198135b4cec1a3a262111809a221c0" style="width: 6vh;"></span><select class="form-select store-state" id="select_gamepad_rs" style="border-style: none;" readonly=""></select></div>
+                                                    <div class="input-group d-flex justify-content-center align-items-center"><span class="input-group-text" style="background: var(--bs-toast-header-border-color);border-style: none;"><img src="/assets/img/linrob/Gamepad/Right%20Trigger.svg?h=37e8c97004516dc20c3f2fa961945751" style="width: 6vh;"></span><select class="form-select store-state" id="select_gamepad_rt" style="border-style: none;" readonly=""></select></div>
+                                                    <div class="input-group d-flex justify-content-center align-items-center"><span class="input-group-text" style="background: var(--bs-toast-header-border-color);border-style: none;"><img src="/assets/img/linrob/Gamepad/B.svg?h=7cde1e82f76825435d7b819356757f61" style="width: 6vh;"></span><select class="form-select store-state" id="select_gamepad_b" style="border-style: none;" readonly=""></select></div>
+                                                    <div class="input-group d-flex justify-content-center align-items-center"><span class="input-group-text" style="background: var(--bs-toast-header-border-color);border-style: none;"><img src="/assets/img/linrob/Gamepad/Y.svg?h=dd92967a83dfce9c33ed4a9078fdccb5" style="width: 6vh;"></span><select class="form-select store-state" id="select_gamepad_y" style="border-style: none;" readonly=""></select></div>
+                                                    <div class="input-group d-flex justify-content-center align-items-center"><span class="input-group-text" style="background: var(--bs-toast-header-border-color);border-style: none;"><img src="/assets/img/linrob/Gamepad/Left%20Stick%20Right.svg?h=80c1eac517db5e3485d33075b173b73f" style="width: 6vh;"></span><select class="form-select store-state" id="select_gamepad_right0" style="border-style: none;" readonly=""></select></div>
+                                                    <div class="input-group d-flex justify-content-center align-items-center"><span class="input-group-text" style="background: var(--bs-toast-header-border-color);border-style: none;"><img src="/assets/img/linrob/Gamepad/Left%20Stick%20Down.svg?h=3654d6c42a3195d5fcbbff2c780c5a99" style="width: 6vh;"></span><select class="form-select store-state" id="select_gamepad_down0" style="border-style: none;" readonly=""></select></div>
+                                                    <div class="input-group d-flex justify-content-center align-items-center"><span class="input-group-text" style="background: var(--bs-toast-header-border-color);border-style: none;"><img src="/assets/img/linrob/Gamepad/Right%20Stick%20Right.svg?h=908f9bbf795134373da0d42a5cc7154b" style="width: 6vh;"></span><select class="form-select store-state" id="select_gamepad_right1" style="border-style: none;" readonly=""></select></div>
+                                                    <div class="input-group d-flex justify-content-center align-items-center"><span class="input-group-text" style="background: var(--bs-toast-header-border-color);border-style: none;"><img src="/assets/img/linrob/Gamepad/Right%20Stick%20Down.svg?h=0bcd87feda496e7bc63fa8fcdcad10ea" style="width: 6vh;"></span><select class="form-select store-state" id="select_gamepad_down1" style="border-style: none;" readonly=""></select></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" role="tabpanel" id="tab-3"><textarea class="form-control noselect wrapper overflow: auto;" id="robot_log" name="code" style="display: block;opacity: 1;border-style: none;height: 40vh;max-height: 40vh;background: #1D1D1D;color: var(--bs-toast-header-bg);font-size: 16px;" readonly="" autocomplete="off" spellcheck="false"></textarea></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-start align-items-start justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-start darkcontainers bkmrker noselect" id="robotToolbarDiv-3" style="background: transparent;border-radius: 21px;opacity: 1;width: 78vw;margin-left: 1vw;margin-bottom: 1vw;"></div>
+                </div>
+                <div class="toast pulse animated noselect z-index-max hide" role="alert" data-bs-animation="false" data-bs-autohide="false" id="toast-robot_status" style="position: absolute;margin-left: -14em;background: transparent;margin-top: 10em;transform: scale(1);opacity: 1;box-shadow: 0px 0px transparent;border-style: none;">
+                    <div class="toast-body noselect" role="alert" id="toast_status_body" style="color: rgb(133, 135, 150);box-shadow: 0px 0px;border-style: none;border-color: transparent;position: absolute;overflow: hidden;">
+                        <div class="container" id="robot_status" style="border-color: rgba(0,0,0,0);margin-top: 1vh;margin-bottom: 1vw;"></div>
+                    </div>
+                </div>
+                <div class="toast pulse animated noselect z-index-max hide" role="alert" data-bs-animation="false" data-bs-autohide="false" id="toast_script_loader" style="background: var(--bs-gray-900);opacity: 1;border-style: none;border-color: transparent;margin-top: 6em;width: 80%;position: fixed;box-shadow: 0px 0px transparent;max-height: 40em;">
+                    <div class="toast-header noselect" style="background: var(--bs-dark);border-style: none;"><img class="me-2" src="/assets/img/linrob/LR-grey.png?h=3158da32ca75dc964812ffeebf7cf79a" width="32px"><strong class="me-auto" style="color: white;">linrob Load Script</strong><button class="btn-close btn-close-white ms-2 mb-1 close" id="btn_script_loader_close" data-bs-dismiss="toast"></button></div>
+                    <div class="toast-body" role="alert" style="color: rgb(133, 135, 150);border-style: none;box-shadow: 0px 0px transparent;opacity: 0.80;padding-top: 0px;background: transparent;">
+                        <div class="table-responsive noselect" id="test_table" style="background: #231F20;border-style: none;border-color: transparent;border-top-style: none;max-height: 20em;height: 20em;">
+                            <table class="table table tablesorter" id="ipi-table">
+                                <thead style="background: #01060e;border-width: 0px;border-color: rgb(0,0,0);border-bottom-color: #21252F;">
+                                    <tr style="border-style: none;border-color: rgba(255,255,255,0);background: #01060e;">
+                                        <th class="text-center">Name</th>
+                                        <th class="text-center">Modified</th>
+                                        <th class="text-center">Location</th>
+                                        <th class="text-center filter-false sorter-false">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center" id="tbody" style="border-top-width: 0px;max-height: 30%;">
+                                    <tr class="invisible" style="background: #1f1f1f;border-style: none;border-color: transparent;">
+                                        <td style="color: rgb(255,255,255);">Test.lrp</td>
+                                        <td style="color: rgb(255,255,255);">10 / 20 / 2022</td>
+                                        <td style="color: rgb(255,255,255);">Robot</td>
+                                        <td class="text-center align-middle" style="max-height: 60px;height: 60px;"><a class="btn btnMaterial btn-flat primary semicircle" role="button" data-bs-toggle="tooltip" data-bss-tooltip="" style="color: #00bdff;" title="Preview Code"><i class="far fa-eye"></i></a><a class="btn btnMaterial btn-flat success semicircle" role="button" data-bs-toggle="tooltip" data-bss-tooltip="" style="color: rgb(0,197,179);" title="Load Code into Editor"><i class="fas fa-cloud-download-alt"></i></a><a class="btn btnMaterial btn-flat accent btnNoBorders checkboxHover" role="button" data-bs-toggle="tooltip" data-bss-tooltip="" style="margin-left: 5px;" title="Delete Scriptfile"><i class="fas fa-trash btnNoBorders" style="color: #DC3545;"></i></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex d-lg-flex justify-content-start justify-content-md-start justify-content-lg-start align-items-lg-center" style="color: white;background: var(--bs-gray-900);border-style: none;border-color: transparent;margin-bottom: 1e;"></div>
+                    <div class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-start align-items-start justify-content-sm-start justify-content-md-start justify-content-lg-start justify-content-xl-start darkcontainers bkmrker noselect" id="robotToolbarDiv-2" style="background: transparent;border-radius: 21px;opacity: 1;width: 78vw;margin-left: 1vw;margin-bottom: 1vw;"><button id="btn_script_upload_local" class="jogBtn noselect" type="button" style="font-family: Roboto, sans-serif;background: rgba(0,0,0,0.7);border-style: none;border-radius: 11px;width: 12em;margin-top: 0.5vw;margin-bottom: 0.5vw;margin-right: 1vw;margin-left: 1vw;height: 3.5em;" title="Upload Scriptfile from local Device"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-file-upload noselect" style="font-size: 25px;color: #d1d1d1;width: 3vw;margin-right: 1%;height: 3vh;">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                                <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"></path>
+                                <line x1="12" y1="11" x2="12" y2="17"></line>
+                                <polyline points="9 14 12 11 15 14"></polyline>
+                            </svg></button></div>
+                </div>
+                <div class="d-flex d-xl-flex justify-content-start align-items-start justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center align-items-xl-start visible sticky float noselect" style="border-color: transparent;--bs-body-color: var(--bs-indigo);background: transparent;overflow: hidden;position: relative;opacity: 1;z-index: 99;width: 98vw;margin-right: 1vw;margin-left: 1vw;">
+                    <div class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-start align-items-start justify-content-sm-center justify-content-md-start justify-content-lg-center darkcontainers bkmrker noselect" id="robotToolbarDiv" style="background: transparent;border-radius: 21px;opacity: 1;margin-left: 1vw;margin-right: 1vw;width: 98vw;"><button id="btn_move_robot" class="jogBtn noselect" type="button" style="font-family: Roboto, sans-serif;background: rgba(0,0,0,0.7);border-style: none;border-radius: 11px;width: 12em;margin-bottom: 0.5vw;margin-left: 1vw;margin-right: 1vw;margin-top: 0.5vw;height: 5em;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrows-move noselect" id="move_robot_icon" style="font-size: 25px;color: #d1d1d1;width: 3vw;margin-right: 1%;height: 3vh;box-shadow: 0px 0px;">
+                                <path fill-rule="evenodd" d="M7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10zM.146 8.354a.5.5 0 0 1 0-.708l2-2a.5.5 0 1 1 .708.708L1.707 7.5H5.5a.5.5 0 0 1 0 1H1.707l1.147 1.146a.5.5 0 0 1-.708.708l-2-2zM10 8a.5.5 0 0 1 .5-.5h3.793l-1.147-1.146a.5.5 0 0 1 .708-.708l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L14.293 8.5H10.5A.5.5 0 0 1 10 8z"></path>
+                            </svg></button><button id="btn_jog_robot" class="jogBtn noselect" type="button" style="font-family: Roboto, sans-serif;background: rgba(0,0,0,0.6509803921568628);border-style: none;border-radius: 11px;background: rgba(0,0,0,0.7);border-style: none;border-radius: 11px;&quot; onclick><svg id=&quot;move_robot_icon&quot; class=&quot;bi bi-arrows-move noselect&quot; xmlns=&quot;http: //www.w3.org/2000/svg&quot; width=&quot;1em&quot; height=&quot;1em&quot; fill=&quot;currentColor&quot; viewBox=&quot;0 0 16 16&quot; style=&quot;font-size: 25px;color: #d1d1d1;width: 12em;margin-top: 0.5vw;margin-bottom: 0.5vw;margin-right: 1vw;margin-left: 1vw;height: 5em;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-96 0 512 512" width="1em" height="1em" fill="currentColor" id="jog_robot_icon" class="noselect" style="width: 3vw;margin-right: 1%;font-size: 25px;color: #d1d1d1;height: 3vh;">
+                                <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                                <path d="M320 64.01v259.4c0 86.36-71.78 156.6-160 156.6s-160-70.26-160-156.6V288c0-17.67 14.31-32 32-32s32 14.33 32 32v35.38c0 51.08 43.06 92.63 96 92.63s96-41.55 96-92.63V64.01c0-17.67 14.31-32 32-32S320 46.34 320 64.01z"></path>
+                            </svg></button><button id="btn_script_robot" class="jogBtn noselect" type="button" style="font-family: Roboto, sans-serif;background: rgba(0,0,0,0.7);border-style: none;border-radius: 11px;width: 12em;margin-top: 0.5vw;margin-bottom: 0.5vw;margin-right: 1vw;margin-left: 1vw;height: 5em;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-64 0 512 512" width="1em" height="1em" fill="currentColor" id="script_robot_icon" class="noselect" style="font-size: 25px;color: #d1d1d1;width: 3vw;margin-right: 1%;height: 3vh;">
+                                <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                                <path d="M224 128L224 0H48C21.49 0 0 21.49 0 48v416C0 490.5 21.49 512 48 512h288c26.51 0 48-21.49 48-48V160h-127.1C238.3 160 224 145.7 224 128zM154.1 353.8c7.812 7.812 7.812 20.5 0 28.31C150.2 386.1 145.1 388 140 388s-10.23-1.938-14.14-5.844l-48-48c-7.812-7.812-7.812-20.5 0-28.31l48-48c7.812-7.812 20.47-7.812 28.28 0s7.812 20.5 0 28.31L120.3 320L154.1 353.8zM306.1 305.8c7.812 7.812 7.812 20.5 0 28.31l-48 48C254.2 386.1 249.1 388 244 388s-10.23-1.938-14.14-5.844c-7.812-7.812-7.812-20.5 0-28.31L263.7 320l-33.86-33.84c-7.812-7.812-7.812-20.5 0-28.31s20.47-7.812 28.28 0L306.1 305.8zM256 0v128h128L256 0z"></path>
+                            </svg></button><button id="btn_robot_status" class="jogBtn noselect" type="button" style="font-family: Roboto, sans-serif;background: rgba(0,0,0,0.7);border-style: none;border-radius: 11px;width: 12em;margin-top: 0.5vw;margin-bottom: 0.5vw;margin-right: 1vw;margin-left: 1vw;height: 5em;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-activity noselect" id="robot_status_icon" style="font-size: 25px;color: #d1d1d1;width: 3vw;margin-right: 1%;height: 3vh;">
+                                <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"></path>
+                            </svg></button><button id="btn_reset_camera" class="jogBtn noselect" type="button" style="font-family: Roboto, sans-serif;background: rgba(0,0,0,0.7);border-style: none;border-radius: 11px;width: 12em;margin-top: 0.5vw;margin-bottom: 0.5vw;margin-right: 1vw;margin-left: 1vw;height: 5em;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-arrows-maximize noselect" style="font-size: 25px;color: #d1d1d1;width: 3vw;margin-right: 1%;height: 3vh;">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <polyline points="16 4 20 4 20 8"></polyline>
+                                <line x1="14" y1="10" x2="20" y2="4"></line>
+                                <polyline points="8 20 4 20 4 16"></polyline>
+                                <line x1="4" y1="20" x2="10" y2="14"></line>
+                                <polyline points="16 20 20 20 20 16"></polyline>
+                                <line x1="14" y1="14" x2="20" y2="20"></line>
+                                <polyline points="8 4 4 4 4 8"></polyline>
+                                <line x1="4" y1="4" x2="10" y2="10"></line>
+                            </svg></button><button id="toolbar_activate_grid" class="jogBtn noselect" type="button" style="font-family: Roboto, sans-serif;background: rgba(0,0,0,0.7);border-style: none;border-radius: 11px;width: 12em;margin-top: 0.5vw;margin-bottom: 0.5vw;margin-right: 1vw;margin-left: 1vw;height: 5em;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-32 0 512 512" width="1em" height="1em" fill="currentColor" id="btn_grid_activate" class="noselect" style="font-size: 25px;color: #d1d1d1;width: 3vw;margin-right: 1%;height: 3vh;">
+                                <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                                <path d="M171.73,232.813A5.381,5.381,0,0,0,176.7,229.5,48.081,48.081,0,0,1,191.6,204.244c1.243-.828,1.657-2.484,1.657-4.141a4.22,4.22,0,0,0-2.071-3.312L74.429,128.473,148.958,85a9.941,9.941,0,0,0,4.968-8.281,9.108,9.108,0,0,0-4.968-8.281L126.6,55.6a9.748,9.748,0,0,0-9.523,0l-100.2,57.966a9.943,9.943,0,0,0-4.969,8.281V236.954a9.109,9.109,0,0,0,4.969,8.281L39.235,258.07a8.829,8.829,0,0,0,4.968,1.242,9.4,9.4,0,0,0,6.625-2.484,10.8,10.8,0,0,0,2.9-7.039V164.5L169.66,232.4A4.5,4.5,0,0,0,171.73,232.813ZM323.272,377.73a12.478,12.478,0,0,0-4.969,1.242l-74.528,43.062V287.882c0-2.9-2.9-5.8-6.211-4.555a53.036,53.036,0,0,1-28.984.414,4.86,4.86,0,0,0-6.21,4.555V421.619l-74.529-43.061a8.83,8.83,0,0,0-4.969-1.242,9.631,9.631,0,0,0-9.523,9.523v26.085a9.107,9.107,0,0,0,4.969,8.281l100.2,57.553A8.829,8.829,0,0,0,223.486,480a11.027,11.027,0,0,0,4.969-1.242l100.2-57.553a9.941,9.941,0,0,0,4.968-8.281V386.839C332.8,382.285,328.24,377.73,323.272,377.73ZM286.007,78a23,23,0,1,0-23-23A23,23,0,0,0,286.007,78Zm63.627-10.086a23,23,0,1,0,23,23A23,23,0,0,0,349.634,67.914ZM412.816,151.6a23,23,0,1,0-23-23A23,23,0,0,0,412.816,151.6Zm-63.182-9.2a23,23,0,1,0,23,23A23,23,0,0,0,349.634,142.4Zm-63.627,83.244a23,23,0,1,0-23-23A23,23,0,0,0,286.007,225.648Zm-62.074,36.358a23,23,0,1,0-23-23A23,23,0,0,0,223.933,262.006Zm188.883-82.358a23,23,0,1,0,23,23A23,23,0,0,0,412.816,179.648Zm0,72.272a23,23,0,1,0,23,23A23,23,0,0,0,412.816,251.92Z"></path>
+                            </svg></button><button class="disabled jogBtn noselect" id="btn_robot_statistics" type="button" style="font-family: Roboto, sans-serif;background: rgba(0,0,0,0.7);border-style: none;border-radius: 11px;width: 12em;margin-top: 0.5vw;margin-bottom: 0.5vw;margin-right: 1vw;margin-left: 1vw;height: 5em;" onclick="" disabled=""><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-graph-up noselect" style="font-size: 25px;color: #d1d1d1;width: 3vw;margin-right: 1%;height: 3vh;">
+                                <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0Zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07Z"></path>
+                            </svg></button><button id="btn_robot_settings" class="jogBtn noselect" type="button" style="font-family: Roboto, sans-serif;background: rgba(0,0,0,0.7);border-style: none;border-radius: 11px;width: 12em;margin-top: 0.5vw;margin-bottom: 0.5vw;margin-right: 1vw;margin-left: 1vw;height: 5em;" onclick=""><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-settings noselect" style="font-size: 25px;color: #d1d1d1;width: 3vw;margin-right: 1%;height: 3vh;">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg></button><button id="btn_disable_robot" class="jogBtn noselect" type="button" style="background: var(--bs-red);border-style: none;border-radius: 11px;width: 12em;margin-top: 0.5vw;margin-bottom: 0.5vw;margin-right: 1vw;margin-left: 1vw;height: 5em;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-64 0 512 512" width="1em" height="1em" fill="currentColor" class="noselect" style="font-size: 25px;color: #d1d1d1;width: 3vw;margin-right: 1%;height: 3vh;">
+                                <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                                <path d="M384 128v255.1c0 35.35-28.65 64-64 64H64c-35.35 0-64-28.65-64-64V128c0-35.35 28.65-64 64-64H320C355.3 64 384 92.65 384 128z"></path>
+                            </svg></button></div>
+                </div>
+            </div>
+            <div class="toast pulse animated noselect z-index-max hide" role="alert" data-bs-animation="false" data-bs-autohide="false" id="toast-move_robot" style="position: fixed;background: transparent;margin-top: 10em;max-width: 50%;opacity: 1;box-shadow: 0px 0px transparent;border-style: none;border-color: transparent;margin-left: 2vw;max-height: 50%;">
+                <div class="toast-header d-flex d-xl-flex justify-content-start align-items-center justify-content-xl-start align-items-xl-center" style="background: transparent;position: static;color: var(--bs-white);"><label class="form-label d-xl-flex justify-content-xl-start align-items-xl-start noselect moveLabel" id="lbl_move_position" style="margin-right: 1em;color: var(--bs-white);margin-top: 0.5em;">Select Axis:</label><select id="select_axis" style="width: 8em;margin-left: 0px;background: #000000;border-color: transparent;height: 2em;border-radius: 8px;text-align: center;">
+                        <optgroup label="Available Axis"></optgroup>
+                    </select>
+                    <div data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="right" class="tada animated infinite led-red moveLabel noselect" id="led_move_status" style="position: static;display: inline-block;margin-left: 23px;" title="Test"></div>
+                    <div data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="right" class="tada animated infinite led-orange moveLabel noselect" id="led_move_simulation" style="position: static;display: inline-block;margin-left: 23px;" title="Test"></div>
+                </div>
+                <div class="toast-body d-flex d-md-flex justify-content-start justify-content-md-start align-items-md-center" role="alert" style="color: rgb(133, 135, 150);border-style: none;margin-bottom: -1em;"><label class="form-label noselect moveLabel" id="lbl_move_velocity" style="color: var(--bs-white);margin-right: 2.4em;margin-top: 0.4em;font-size: 1em;">Position:</label><input type="number" id="txt_position_move" class="moveLabel" style="color: var(--bs-white);background: transparent;border-style: groove;width: 12em;" inputmode="numeric"><label class="form-label noselect" id="lbl_move_position_unit" style="margin-right: 0px;margin-left: 5px;">&nbsp;</label></div>
+                <div class="toast-body d-flex d-md-flex justify-content-start justify-content-md-start align-items-md-center" role="alert" style="color: rgb(133, 135, 150);border-style: none;margin-bottom: -1em;"><label class="form-label noselect moveLabel" id="lbl_move_velocity-3" style="color: var(--bs-white);margin-right: 2.4em;margin-top: 0.4em;">Velocity:</label><input type="number" id="txt_velocity_move" class="moveLabel" style="color: var(--bs-white);background: transparent;border-style: groove;width: 12em;" inputmode="numeric"><label class="form-label noselect" id="lbl_move_velocity_unit" style="margin-right: 0px;margin-left: 5px;">&nbsp;</label></div>
+                <div class="toast-body d-flex float-none d-md-flex justify-content-start justify-content-md-start align-items-md-center" role="alert" style="color: rgb(133, 135, 150);border-style: none;margin-bottom: -1em;"><label class="form-label noselect moveLabel" id="lbl_move_velocity" style="color: var(--bs-white);margin-right: 0.5em;margin-top: 0.4em;">Acceleration:</label><input type="number" id="txt_acceleration_move" class="moveLabel" style="color: var(--bs-white);background: transparent;border-style: groove;width: 12em;" inputmode="numeric"><label class="form-label noselect" id="lbl_move_acceleration_unit" style="margin-right: 0px;margin-left: 5px;">&nbsp;</label></div>
+                <div class="toast-body d-flex d-md-flex justify-content-start align-items-center justify-content-md-start align-items-md-center" role="alert" style="color: rgb(133, 135, 150);border-style: none;"><label class="form-label noselect moveLabel" id="lbl_move_velocity" style="color: var(--bs-white);margin-right: 0.4em;margin-top: 0.4em;">Deceleration:</label><input type="number" id="txt_deceleration_move" class="moveLabel" style="color: var(--bs-white);background: transparent;border-style: groove;width: 12em;" inputmode="numeric"><label class="form-label noselect" id="lbl_move_deceleration_unit" style="margin-right: 0px;margin-left: 5px;">&nbsp;</label></div>
+                <div class="modal-footer d-flex d-md-flex justify-content-center justify-content-sm-center justify-content-md-start align-items-md-center justify-content-lg-start justify-content-xl-start" style="color: white;background: transparent;border-style: none;border-color: transparent;margin-top: 1em;"><button id="btn_move_to_position" class="jogBtn noselect moveLabel" type="button" style="background: var(--bs-black);border-style: none;border-radius: 11px;height: 38px;color: var(--bs-white);--bs-primary: transparent;--bs-primary-rgb: 0,0,0;margin-right: 1em;width: 10em;"><strong id="txt_btn_enable_move-3" class="noselect" style="color: var(--bs-white);font-size: 14px;">Move to Position</strong></button><button id="btn_enable_move" class="jogBtn noselect moveLabel" type="button" style="background: var(--bs-red);border-style: none;border-radius: 11px;height: 38px;color: var(--bs-white);--bs-primary: transparent;--bs-primary-rgb: 0,0,0;width: 10em;"><strong id="txt_btn_enable_move" class="noselect" style="color: var(--bs-white);font-size: 14px;">Disable</strong></button></div>
+            </div>
+            <div class="toast pulse animated noselect z-index-max hide" role="alert" data-bs-animation="false" data-bs-autohide="false" id="toast-position-scope" style="position: fixed;background: transparent;margin-top: 6em;max-width: 50%;opacity: 1;box-shadow: 0px 0px transparent;border-style: none;border-color: transparent;margin-left: 2em;max-height: 50%;">
+                <div class="toast-header d-flex d-xl-flex justify-content-start align-items-center justify-content-xl-start align-items-xl-center" style="background: transparent;position: static;color: var(--bs-white);"><label class="form-label d-xl-flex justify-content-xl-start align-items-xl-start noselect moveLabel" id="lbl_move_position-2" style="margin-right: 1em;color: var(--bs-white);margin-top: 0.5em;">Select Axis:</label><select id="select_axis_scope" style="width: 8em;margin-left: 0px;background: #000000;border-color: transparent;height: 2em;border-radius: 8px;text-align: center;">
+                        <optgroup label="Available Axis"></optgroup>
+                    </select></div>
+                <div class="toast-body d-flex d-md-flex justify-content-start justify-content-md-start align-items-md-center" role="alert" style="color: rgb(133, 135, 150);border-style: none;margin-bottom: -1em;"><canvas id="position_scope" width="300" height="50"></div>
+                <div class="toast-body d-flex d-md-flex justify-content-start justify-content-md-start align-items-md-center" role="alert" style="color: rgb(133, 135, 150);border-style: none;margin-bottom: -1em;"><canvas id="velocity_scope" width="300" height="50"></div>
+                <div class="toast-body d-flex float-none d-md-flex justify-content-start justify-content-md-start align-items-md-center" role="alert" style="color: rgb(133, 135, 150);border-style: none;margin-bottom: -1em;"><canvas id="acceleration_scope" width="300" height="50"></div>
+                <div class="toast-body d-flex d-md-flex justify-content-start align-items-center justify-content-md-start align-items-md-center" role="alert" style="color: rgb(133, 135, 150);border-style: none;"><canvas id="deceleration_scope" width="300" height="50"></div>
+                <div class="modal-footer d-flex d-md-flex justify-content-center justify-content-sm-center justify-content-md-start align-items-md-center justify-content-lg-start justify-content-xl-start" style="color: white;background: transparent;border-style: none;border-color: transparent;margin-top: 1em;"></div>
+            </div>
+            <div class="toast pulse animated noselect z-index-max hide" role="alert" data-bs-animation="false" data-bs-autohide="false" id="toast_jog_robot" style="position: fixed;background: transparent;margin-top: 10em;transform: scale(1);opacity: 1;box-shadow: 0px 0px transparent;border-style: none;margin-left: 2em;width: 27em;">
+                <div class="toast-body noselect" role="alert" id="toast_jog_body" style="color: rgb(133, 135, 150);height: 84vh;box-shadow: 0px 0px;border-style: none;border-color: transparent;"></div>
+            </div>
+        </div>
+    </header><canvas class="noselect" id="robot_view"></canvas>
+
+    <footer class="text-center d-block justify-content-start align-items-center justify-content-xl-start align-items-xl-center py-4 noselect" id="linrob_footer" style="background: transparent;position: relative;display: none;">
+        <div class="container d-flex d-xl-flex justify-content-start align-items-center justify-content-xl-start align-items-xl-center noselect" id="linrob_footer_container">
+            <div class="row row-cols-1 row-cols-lg-3 d-lg-flex noselect">
+                <div class="col d-lg-flex justify-content-lg-center noselect"><img class="noselect" src="/assets/img/linrob/lr_motion_center.png?h=d4e4f957dca2d94564c28f695dfe743d" style="width: 100%;"></div>
+            </div>
+        </div>
+    </footer>
+    <div class="modal fade z-index-modal" role="dialog" tabindex="-1" id="model_script_delete" style="border-style: none;box-shadow: 0px 0px;backdrop-filter: opacity(1);">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background: var(--bs-gray-900);border-style: none;border-color: rgb(133,135,150);"><img class="me-2" src="/assets/img/linrob/LR-grey.png?h=3158da32ca75dc964812ffeebf7cf79a" width="32px">
+                    <h5 class="modal-title" id="lbl_modal_delete_script_title">Modal Title</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="background: var(--bs-gray-900);border-style: none;">
+                    <p id="modal_script_delete_text" style="color: white;font-family: Nunito, sans-serif;font-size: 16px;background: var(--bs-gray-900);">The content of your modal.</p>
+                </div>
+                <div class="modal-footer" style="color: white;background: var(--bs-gray-900);border-style: none;border-color: rgb(133,135,150);"><button class="btn btn-light" type="button" data-bs-dismiss="modal" style="border-color: black;background: black;color: white;">Cancel</button><button class="btn btn-primary" id="btn_modal_script_delete" type="button" style="background: var(--bs-red);border-color: var(--bs-red);">Delete</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade z-index-modal" role="dialog" tabindex="-1" id="modal_home_axis" style="border-style: none;box-shadow: 0px 0px;backdrop-filter: opacity(1);">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background: var(--bs-gray-900);border-style: none;border-color: rgb(133,135,150);"><img class="me-2" src="/assets/img/linrob/LR-grey.png?h=3158da32ca75dc964812ffeebf7cf79a" width="32px">
+                    <h5 class="modal-title" id="lbl_modal_home_title">Modal Title</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="background: var(--bs-gray-900);border-style: none;">
+                    <p id="modal_home_text" style="color: white;font-family: Nunito, sans-serif;font-size: 16px;background: var(--bs-gray-900);">The content of your modal.</p><select id="modal_home_axis_select" style="width: 16vh;margin-left: 0px;background: #000000;border-color: transparent;height: 2vw;border-radius: 8px;">
+                        <optgroup label="Available Axis"></optgroup>
+                    </select>
+                </div>
+                <div class="modal-footer" style="color: white;background: var(--bs-gray-900);border-style: none;border-color: rgb(133,135,150);"><button class="btn btn-light" type="button" data-bs-dismiss="modal" style="border-color: black;background: black;color: white;">Cancel</button><button class="btn btn-primary" id="btn_modal_home_axis" type="button" style="background: var(--bs-red);border-color: var(--bs-red);">Home</button></div>
+                <div class="modal fade z-index-modal" role="dialog" tabindex="-1" id="modal_home_axis" style="border-style: none;box-shadow: 0px 0px;backdrop-filter: opacity(1);">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header" style="background: var(--bs-gray-900);border-style: none;border-color: rgb(133,135,150);"><img class="me-2" src="/assets/img/linrob/LR-grey.png?h=3158da32ca75dc964812ffeebf7cf79a" width="32px">
+                                <h5 class="modal-title" id="lbl_modal_home_title">Modal Title</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" style="background: var(--bs-gray-900);border-style: none;">
+                                <p id="modal_home_text" style="color: white;font-family: Nunito, sans-serif;font-size: 16px;background: var(--bs-gray-900);">The content of your modal.</p><select id="modal_home_axis_select" style="width: 16vh;margin-left: 0px;background: #000000;border-color: transparent;height: 2vw;border-radius: 8px;">
+                                    <optgroup label="Available Axis"></optgroup>
+                                </select>
+                            </div>
+                            <div class="modal-footer" style="color: white;background: var(--bs-gray-900);border-style: none;border-color: rgb(133,135,150);"><button class="btn btn-light" type="button" data-bs-dismiss="modal" style="border-color: black;background: black;color: white;">Cancel</button><button class="btn btn-primary" id="btn_modal_home_axis" type="button" style="background: var(--bs-red);border-color: var(--bs-red);">Home</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade z-index-modal" role="dialog" tabindex="-1" id="modal_safety_warning" style="border-style: none;box-shadow: 0px 0px;backdrop-filter: opacity(1);">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background: var(--bs-gray-900);border-style: none;border-color: rgb(133,135,150);"><img class="me-2" src="/assets/img/linrob/LR-grey.png?h=3158da32ca75dc964812ffeebf7cf79a" width="32px">
+                    <h5 class="modal-title" id="lbl_modal_safety_title">Warning!</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex d-sm-flex d-lg-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-lg-center align-items-lg-center" style="background: var(--bs-gray-900);border-style: none;"><img class="d-flex d-md-flex d-lg-flex justify-content-center align-items-center align-items-md-center align-items-lg-center justify-content-xl-start" src="/assets/img/linrob/Warnung_Quetschgefahr.png?h=cea1cb5369bd97b2e393307b1d1f92e0" height="128px">
+                    <p class="text-center" id="modal_safety_text" style="color: white;font-family: Nunito, sans-serif;font-size: 16px;background: var(--bs-gray-900);text-align: left;font-weight: bold;"><span style="font-weight: normal !important;">Be careful when moving Axes in Jog Mode, there are no Position limits. Check if Position is valid.&nbsp;</span><br><strong><span style="color: rgb(240, 113, 120);">Therefore, in all cases before running the function, make sure that personal injury and machine damage are impossible!</span></strong><br></p><img class="d-flex d-md-flex d-lg-flex justify-content-center align-items-center align-items-md-center align-items-lg-center justify-content-xl-start" src="/assets/img/linrob/Warnung_DrehendeTeile.png?h=8a8aca632fd067a234c8ce620a05a962" height="128px">
+                </div>
+                <div class="modal-footer" style="color: white;background: var(--bs-gray-900);border-style: none;border-color: rgb(133,135,150);"><button class="btn btn-light" id="btn_safety_jog_accept" type="button" data-bs-dismiss="modal" style="border-color: black;background: black;color: white;width: 200vw;">Understand</button></div>
+                <div class="modal fade z-index-modal" role="dialog" tabindex="-1" id="modal_home_axis-2" style="border-style: none;box-shadow: 0px 0px;backdrop-filter: opacity(1);">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header" style="background: var(--bs-gray-900);border-style: none;border-color: rgb(133,135,150);"><img class="me-2" src="/assets/img/linrob/LR-grey.png?h=3158da32ca75dc964812ffeebf7cf79a" width="32px">
+                                <h5 class="modal-title" id="lbl_modal_home_title-2">Modal Title</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" style="background: var(--bs-gray-900);border-style: none;">
+                                <p id="modal_home_text-2" style="color: white;font-family: Nunito, sans-serif;font-size: 16px;background: var(--bs-gray-900);">The content of your modal.</p><select id="modal_home_axis_select-2" style="width: 16vh;margin-left: 0px;background: #000000;border-color: transparent;height: 2vw;border-radius: 8px;">
+                                    <optgroup label="Available Axis"></optgroup>
+                                </select>
+                            </div>
+                            <div class="modal-footer" style="color: white;background: var(--bs-gray-900);border-style: none;border-color: rgb(133,135,150);"><button class="btn btn-light" type="button" data-bs-dismiss="modal" style="border-color: black;background: black;color: white;">Cancel</button><button class="btn btn-primary" id="btn_modal_home_axis-2" type="button" style="background: var(--bs-red);border-color: var(--bs-red);">Home</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade z-index-modal" role="dialog" tabindex="-1" id="modal_script_save" style="border-style: none;">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header noselect" style="background: var(--bs-gray-900);border-style: none;"><img class="me-2" src="/assets/img/linrob/LR-grey.png?h=3158da32ca75dc964812ffeebf7cf79a" width="32px">
+                    <h5 class="modal-title" id="lbl_modal_save_script_title">Save linrob Script</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex d-xl-flex justify-content-center align-items-center justify-content-xl-center align-items-xl-center noselect" style="background: var(--bs-gray-900);border-style: none;"><select id="select_save_location" class="jogBtn noselect" style="width: 131px;max-width: 131px;height: 38px;max-height: 38px;margin-right: 1vw;background: rgba(0,0,0,0.6509803921568628);border-style: none;border-color: transparent;border-radius: 2vh;text-align: center;">
+                        <option value="SaveOnRobot" selected="">Robot</option>
+                        <option value="saveOnLocal">Local</option>
+                    </select><input type="text" id="txt_script_save_filename" style="display: inline-block;position: static;width: 25vw;height: 4vh;color: white;border-style: none;background: var(--bs-gray-700);" autocomplete="off"></div>
+                <div class="modal-footer noselect" style="color: white;background: var(--bs-gray-900);border-style: none;"><button class="btn jogBtn noselec" type="button" data-bs-dismiss="modal" style="background: black;color: white;border-color: black;">Cancel</button><button class="btn btn-primary jogBtn noselect" id="btn_modal_script_save" type="button" style="background: var(--bs-green);border-color: var(--bs-green);">Save</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade z-index-modal" role="dialog" tabindex="-1" id="model_script_running" style="border-style: none;">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background: var(--bs-gray-900);border-style: none;border-color: rgb(133,135,150);"><img class="me-2" src="/assets/img/linrob/LR-grey.png?h=3158da32ca75dc964812ffeebf7cf79a" width="32px">
+                    <h5 class="modal-title" id="lbl_modal_save_script_title-1">Script already running!</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="background: var(--bs-gray-900);border-style: none;border-color: transparent;">
+                    <p id="modal_script_running_text" style="color: white;font-family: Nunito, sans-serif;margin-bottom: 7px;background: var(--bs-gray-900);">Script is already running on another device, do you wan't to get the Script from there?</p>
+                    <form id="moda_editor_form" style="background: var(--bs-dark);"><textarea class="form-control" id="txt_code_from_another_device" style="height: 192px;background: var(--bs-gray-900);border-style: none;" spellcheck="false" autocomplete="off" readonly=""></textarea></form>
+                </div>
+                <div class="modal-footer" style="color: white;background: var(--bs-gray-900);border-style: none;border-color: transparent;"><button class="btn btn-light" id="btn_script_from_other_device_abort" type="button" data-bs-dismiss="modal" style="background: var(--bs-red);border-color: var(--bs-red);color: white;">No</button><button class="btn btn-primary" id="btn_get_script_from_other_device" type="button" style="background: var(--bs-green);border-color: var(--bs-green);">Yes</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade z-index-modal" role="dialog" tabindex="-1" id="model_script_preview" style="border-style: none;overflow: hidden;">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background: var(--bs-gray-900);border-style: none;border-color: rgb(133,135,150);"><img class="me-2" src="/assets/img/linrob/LR-grey.png?h=3158da32ca75dc964812ffeebf7cf79a" width="32px">
+                    <h5 class="modal-title" id="lbl_modal_save_script_title-2">Script Preview</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="background: var(--bs-gray-900);border-style: none;border-color: transparent;">
+                    <form id="modal_editor_preview_form" style="background: var(--bs-dark);"><textarea class="form-control" id="txt_code_preview" style="height: 50vh;background: var(--bs-gray-900);border-style: none;" readonly=""></textarea></form>
+                </div>
+                <div class="modal-footer" style="color: white;background: var(--bs-gray-900);border-style: none;border-color: transparent;"><button class="btn btn-primary" id="btn_script_preview_close" type="button" style="background: var(--bs-green);border-color: var(--bs-green);">Close</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal_loading_screen" style="overflow: hidden; background: #1C1C1C;">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen" role="document">
+            <div class="modal-content">
+                <div class="modal-body d-flex d-sm-flex d-lg-flex justify-content-center align-items-center justify-content-lg-center align-items-lg-center noselect" style="background: #1C1C1C;overflow: hidden;">
+                    <div style="overflow: hidden;">
+                        <div class="d-flex d-sm-flex d-lg-flex justify-content-center align-items-center justify-content-sm-center justify-content-lg-center align-items-lg-center steps-progressbar noselect" style="overflow: hidden;"><img class="img-fluid d-sm-flex" src="/assets/img/linrob/rgbWhite.svg?h=50865b030c9f5fa728d0d7ff810324c1" width="250em"></div>
+                        <div class="d-flex d-sm-flex d-lg-flex justify-content-center align-items-center justify-content-sm-center justify-content-lg-center align-items-lg-center steps-progressbar noselect" style="overflow: hidden;"><img class="img-fluid d-sm-flex" src="/assets/img/linrob/lrHUDLoader.svg?h=6c99b5de4edb0c665df05de7b98f641d" style="height: 10rem;background: var(--bs-primary);"></div>
+                        <div class="d-flex d-sm-flex d-lg-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-lg-center align-items-lg-center steps-progressbar noselect" style="overflow: hidden;margin-top: 2em;"><img class="img-fluid d-flex" src="/assets/img/linrob/lr1c1c.jpg?h=1d9de020f5c4cb0b5169e1aae4cbf106" width="250em"></div>
+                        <div class="steps-progressbar" style="overflow: hidden;"></div><strong class="d-flex d-lg-flex justify-content-center align-items-center justify-content-lg-center align-items-lg-center">Loading...</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal_orientation_change" style="overflow: hidden;background: #1C1C1C;">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen" role="document">
+            <div class="modal-content">
+                <div class="modal-body d-flex d-sm-flex d-lg-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-lg-center align-items-lg-center noselect" style="background: #1C1C1C;overflow: hidden;">
+                    <div style="overflow: hidden;">
+                        <div class="d-flex d-sm-flex d-lg-flex justify-content-center align-items-center justify-content-sm-center justify-content-lg-center align-items-lg-center steps-progressbar noselect" style="overflow: hidden;"><img class="d-sm-flex justify-content-sm-center align-items-sm-center" src="/assets/img/linrob/rgbWhite.svg?h=50865b030c9f5fa728d0d7ff810324c1" width="356" height="117"></div>
+                        <div class="d-flex d-sm-flex d-lg-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-lg-center align-items-lg-center steps-progressbar noselect" style="overflow: hidden;"></div>
+                    </div>
+                </div>
+                <div class="modal-body d-flex d-sm-flex d-lg-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-lg-center align-items-lg-center noselect" style="background: #1C1C1C;overflow: hidden;">
+                    <div style="overflow: hidden;"></div><img class="d-flex d-sm-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center swing animated infinite" src="/assets/img/linrob/rotate_smartphone_white.png?h=228a81fad32a13c97d96e4ae6a550338" width="265">
+                </div>
+                <div class="modal-body d-flex d-sm-flex d-lg-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-lg-center align-items-lg-center noselect" style="background: #1C1C1C;overflow: hidden;border-style: none;">
+                    <div style="overflow: hidden;">
+                        <div class="d-flex d-sm-flex d-lg-flex justify-content-center align-items-center justify-content-sm-center justify-content-lg-center align-items-lg-center steps-progressbar noselect" style="overflow: hidden;"></div>
+                        <div class="d-flex d-sm-flex d-lg-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-lg-center align-items-lg-center steps-progressbar noselect" style="overflow: hidden;"></div>
+                    </div><strong class="pulse animated infinite">Please rotate your Device !</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/jquery.min.js?h=84e399b8f2181ccd73394fdeddff1638"></script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js?h=981245863c383366a329259d02b8172c"></script>
+    <script src="/assets/js/bs-init.js?h=e587a91545cf66d3fd533bbf63325b1e"></script>
+    <script src="/assets/js/Notifier/Toastify/toastify.js?h=9d18f37a1ab28597a9a60bc647f0e401"></script>
+    <script src="/assets/js/Notifier/Toastify/Toasts.js?h=f7db20d4a43e248da0cab281031d751c"></script>
+    <script src="/assets/js/utils/ButtonDebounce.js?h=3f2505fff5bbe5b68011d600f7262772"></script>
+    <script src="/assets/js/utils/jquery-ui.min.js?h=1e2047978946a1d271356d0b557a84a3"></script>
+    <script src="/assets/js/ScriptEditor/utils/getScripts.js?h=b49609987cb34582b5777accdc9e0667"></script>
+    <script src="/assets/js/utils/jquery.ui.touch-punch.min.js?h=700b877cd3ade98ce6cd4be349d81a5c"></script>
+    <script src="/assets/js/Events/MoveTab/move_events.js?h=bfffbb4b45eb594e5524e1c81605a92d"></script>
+    <script src="/assets/js/Events/ScriptsTab/script_events.js?h=3b4b27896f2ca81f8266a5b3f75d9d50"></script>
+    <script src="/assets/js/utils/autoStore.js?h=00bb13af32b97f3b121b776a493692cd"></script>
+    <script src="/assets/js/lrCOM/socket.io.js?h=f0be21890062da7a4ae4abfce085552a"></script>
+    <script src="/assets/js/lrCOM/events/socketIO_events.js?h=5831da7d8e606bcc108cbf6aba9332cc"></script>
+    <script src="/assets/js/Events/JogTab/jog_events.js?h=4794bd77785ff2ecc8f4760c859a7ffe"></script>
+    <script src="/assets/js/Events/RobotStatusTab/status_events.js?h=4dc711032f47f1458e50a08d225e2104"></script>
+    <script src="/assets/js/lr3D/three/three.min.js?h=4e5bcdf3484dcf37ed3c5a90ba66eb99"></script>
+    <script src="/assets/js/lr3D/three/addons/controls/OrbitControls.js?h=2a127b14ba37116fe84a72835ff33a20"></script>
+    <script src="/assets/js/lr3D/three/addons/controls/OrbitControlsGizmo.js?h=2afae275c0b5adde1befa9cc9da6c208"></script>
+    <script src="/assets/js/lr3D/three/addons/gui/dat.gui.min.js?h=d67b54c4a1935334a5a61802172790af"></script>
+    <script src="/assets/js/lr3D/three/3dView.mjs?h=e0bc8e884db427baf7f7a53f0bf71296" type="module"></script>
+    <script src="/assets/js/lr3D/three/addons/loaders/GLTFLoader.js?h=78abcc3f16dc6a93f7bb228fb3bec79a"></script>
+    <script src="/assets/js/lr3D/three/addons/postprocessing/Pass.js?h=de22918111e788a1334494873682dc0a"></script>
+    <script src="/assets/js/lr3D/three/addons/shaders/FXAAShader.js?h=176affdc45ec11e7760bf3d0f5f61ca9"></script>
+    <script src="/assets/js/lr3D/three/addons/postprocessing/ShaderPass.js?h=0152832daba15cdca5cf8a369466f011"></script>
+    <script src="/assets/js/lr3D/three/addons/postprocessing/RenderPass.js?h=58be754985392c791332f445ca799d27"></script>
+    <script src="/assets/js/lr3D/three/addons/postprocessing/EffectComposer.js?h=8c13efaa893f88750a1add20c65ab2f6"></script>
+    <script src="/assets/js/lr3D/three/addons/shaders/LuminosityHighPassShader.js?h=75ab19d6402a9f14eb582b309bf89999"></script>
+    <script src="/assets/js/lr3D/three/addons/shaders/CopyShader.js?h=d8d256751beaa4363d54047f59c14bb5"></script>
+    <script src="/assets/js/lr3D/three/addons/postprocessing/UnrealBloomPass.js?h=08a578be9ebe80d8792da08309dd0b2c"></script>
+    <script src="/assets/js/lr3D/three/addons/libs/stats.min.js?h=a18d9a11cbd79f312087c3bcc39ee310"></script>
+    <script src="/assets/js/utils/Notifier.min.js?h=611d1d46679ea2ce77949d57d0bf626a"></script>
+    <script src="/assets/js/ScriptEditor/lib/codemirror.js?h=893275dc9ef1e44247b8b7e5212c8fcf"></script>
+    <script src="/assets/js/ScriptEditor/mode/python.min.js?h=3b0de08e50580cfe41b84851c0e90684"></script>
+    <script src="/assets/js/ScriptEditor/addon/display/autorefresh.js?h=8061b40607bbb1f57d29f7e8d5b9cc71"></script>
+    <script src="/assets/js/ScriptEditor/addon/edit/matchbrackets.js?h=595f0e371f7cc5ce4e185f383daa1a2e"></script>
+    <script src="/assets/js/ScriptEditor/addon/edit/closebrackets.js?h=eb83b95466a14ca8d34ab4cb7ce376fd"></script>
+    <script src="/assets/js/ScriptEditor/addon/search/jump-to-line.js?h=4b5563b3631999c7afca21294ff9fbe3"></script>
+    <script src="/assets/js/ScriptEditor/addon/search/match-highlighter.js?h=ff72afae9ecb6051d9c8388ece4f5614"></script>
+    <script src="/assets/js/ScriptEditor/addon/search/matchesonscrollbar.js?h=8b56d131256e182b4946fc6a706d1b15"></script>
+    <script src="/assets/js/ScriptEditor/addon/search/search.js?h=ba7de9546a8406ba253187946247ce88"></script>
+    <script src="/assets/js/ScriptEditor/addon/search/searchcursor.js?h=7b37666f890cd8e7c21e8953a0b44a8d"></script>
+    <script src="/assets/js/ScriptEditor/addon/scroll/simplescrollbars.js?h=68c69270602308f2418f24283ecf724a"></script>
+    <script src="/assets/js/ScriptEditor/addon/dialog/dialog.js?h=b87ca7706640e984fe7b083c92a31424"></script>
+    <script src="/assets/js/ScriptEditor/addon/scroll/annotatescrollbar.js?h=2d43ad69159c407a67479dc5493d7bd8"></script>
+    <script src="/assets/js/ScriptEditor/addon/fold/comment-fold.js?h=7ac47fa3eedb063529474afadf5439af"></script>
+    <script src="/assets/js/ScriptEditor/addon/fold/brace-fold.js?h=353014ec7532d02bb5154f33c3a3acfd"></script>
+    <script src="/assets/js/ScriptEditor/addon/fold/foldcode.js?h=84e31bef3eb836d40e211e41862ad607"></script>
+    <script src="/assets/js/ScriptEditor/addon/fold/foldgutter.js?h=e12055ba7afb7b51dfcfab77b037cd62"></script>
+    <script src="/assets/js/ScriptEditor/addon/fold/indent-fold.js?h=0a0f645f2ac834ea62e97e3f0cc4e84d"></script>
+    <script src="/assets/js/ScriptEditor/addon/fold/xml-fold.js?h=402caeeb2dd3aa9e72dc0ab325b5046e"></script>
+    <script src="/assets/js/ScriptEditor/addon/fold/markdown-fold.js?h=563fd2f8276382804c3ccbe93bbff8b0"></script>
+    <script src="/assets/js/Gamepad/gamecontroller.min.js?h=c6aa0849a3becc77289ad34984ac7e97"></script>
+    <script src="/assets/js/Gamepad/gamecontrollerEvents.js?h=270a7cc29c240427eb894b4ead38a07c"></script>
+    <script src="/assets/js/lrCOM/lrLib.js?h=9f1a2e1921d165dca5f1bb45704e3d8f"></script>
+    <script src="/assets/js/utils/attachNumpad.js?h=e785eb05ce1f97e536aeb30e7b49dcca"></script>
+    <script src="/assets/js/ScriptEditor/utils/anyword-hint.js?h=35f094c06b9dd955808f692002d20e06"></script>
+    <script src="/assets/js/ScriptEditor/utils/CreateEditor.js?h=f2449f1bdfea43ac2d6747ffae9d28ae"></script>
+    <script src="/assets/js/ScriptEditor/utils/keyword.js?h=0c4b7bb8806e786542e146f1533cd1a6"></script>
+    <script src="/assets/js/ScriptEditor/utils/show-hint.js?h=a1b13f38c6e9934270584f379d38e529"></script>
+    <script src="/assets/js/ScriptEditor/addon/selection/active-line.js?h=c43566b446b506e2815d3813e32761d0"></script>
+    <script src="/assets/js/ScriptEditor/addon/lint/lint.js?h=f3dcfb488e6aa6573d8ff60457f75048"></script>
+    <script src="/assets/js/ScriptEditor/addon/selection/mark-selection.js?h=3c618002d4313cecf24061c58a089eb3"></script>
+    <script src="/assets/js/ScriptEditor/addon/selection/selection-pointer.js?h=effb61b0d0e9a22db651928fe207fa0f"></script>
+    <script src="/assets/js/utils/FileSaver.js?h=4698737e22900c30d8a10758a4829b01"></script>
+    <script src="/assets/js/loadingBar/loading-bar.js?h=52c8175fe36d866468d764c260c9a3db"></script>
+    <script src="/assets/js/utils/ButtonEvents.js?h=b8b9efbb8bd2fd5ba56afc17a91167d4"></script>
+    <script src="/assets/js/Events/3DView/3DViewEvents.js?h=d41d8cd98f00b204e9800998ecf8427e"></script>
+    <script src="/assets/js/Charts/smoothie.js?h=a3abc1d1f3c5120e7482acf120f4a46d"></script>
+    <script src="/assets/js/Charts/Scopes.js?h=5765b2aec825ba670f0a8038c841573c"></script>
+    <script src="/assets/js/MotionCenterSettings/MCSettingsEvents.js?h=d41d8cd98f00b204e9800998ecf8427e"></script>
+</body>
+
+</html>

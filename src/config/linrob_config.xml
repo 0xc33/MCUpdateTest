@@ -1,0 +1,143 @@
+<linrob name="LR-RE3.3" serialnumber="4711" gui_model="../www/src/models/lr_3_3.json" log_level="DEBUG">
+    <config>
+        <linrob_server enabled="True">
+			<ip>172.16.127.60</ip>
+			<port>50002</port>
+			<server_route>/www</server_route>
+			<server_files_path>communication/tcp_ip/server/www/</server_files_path>
+			<broadcast_frequency>0.03</broadcast_frequency>
+			<log_level_lrServer>DEBUG</log_level_lrServer>
+			<log_level_asyncIO>ERROR</log_level_asyncIO>
+			<log_level_socketIO>ERROR</log_level_socketIO>
+			<log_level_engineIO>ERROR</log_level_engineIO>
+			<log_level_webSocket>ERROR</log_level_webSocket>
+		</linrob_server>
+        <linrob_client enabled="False" />
+        <xmlrpc_server enabled="True">
+			<ip>172.16.127.60</ip>
+			<port>50003</port>
+			<log_level>DEBUG</log_level>
+			<log_requests>False</log_requests>
+		</xmlrpc_server>
+        <rtde_client enabled="True">
+			<ip>172.16.127.111</ip>
+			<port>30004</port>
+			<config_filename>src/config/urcap/lrcap_rtde_config.xml</config_filename>
+			<log_level>INFO</log_level>
+			<data_poll_frequency>0.001</data_poll_frequency>
+		</rtde_client>
+		<ftp_server enabled="False">
+			<ip>192.168.2.22</ip>
+			<port>21</port>
+			<ftp_user>linrob</ftp_user>
+			<ftp_password>l!nr0b</ftp_password>
+			<ftp_directory>src/ftpDir/</ftp_directory>
+			<log_level>INFO</log_level>
+		</ftp_server>
+    </config>
+	<axis name="X-Axis" dev_mode="True" enabled="True">
+        <id>0</id>
+		<gui_uuid>5B9F30B2-B425-4296-A1BD-B2F5478554C7</gui_uuid>
+		<axis_type>linear</axis_type>
+		<axis_direction>x</axis_direction>
+        <log_level>DEBUG</log_level>
+        <part_number>EVE-XCR-C</part_number>
+    	<product_code>46338049</product_code>
+    	<revision_number>196628</revision_number>
+    	<serialnumber>lr3-3-x</serialnumber>
+		<firmware_version>2.0.0</firmware_version>
+    	<bootloader_version>1.0.1.00</bootloader_version>
+		<connection>Ethernet</connection>
+    	<ipaddress>192.168.2.22</ipaddress>
+    	<port>1061</port>
+		<protocol>UDP</protocol>
+		<connection_type>ETH</connection_type>
+		<network_device_id>\\Device\\NPF_{F1CCA73C-315C-4B37-9915-6D8C5F2EF722}</network_device_id>
+		<data_poll_frequency>0.03</data_poll_frequency>
+    	<xdf>src/config/motionlabFiles/eve-xcr/xdf/eve-xcr-c_eth.xdf</xdf>
+    	<pos_limit_max>3100</pos_limit_max>
+    	<pos_limit_min>0.0</pos_limit_min>
+    	<vel_limit_max>50.0</vel_limit_max>
+    	<vel_limit_min>0.0</vel_limit_min>
+    	<acc_limit_max>50.0</acc_limit_max>
+    	<acc_limit_min>0.0</acc_limit_min>
+		<position_offset_gui>1680</position_offset_gui>
+		<invert_position>False</invert_position>
+        <motor name="HeiDrive">
+        	<id>1</id>
+        	<part_number>HMD08-020-048-30</part_number>
+        	<serialnumber>401989400001</serialnumber>
+            <xcf>src/config/capitan_heidrive_2axis.xcf</xcf>
+	    </motor>
+	</axis>
+	<axis name="Y-Axis" dev_mode="True" enabled="True">
+        <id>1</id>
+		<gui_uuid>44AC1DFA-1C99-4F51-8A80-8ECE33932A06</gui_uuid>
+		<axis_type>linear</axis_type>
+		<axis_direction>y</axis_direction>
+        <log_level>DEBUG</log_level>
+        <part_number>EVE-XCR-C</part_number>
+    	<product_code>46338049</product_code>
+    	<revision_number>196628</revision_number>
+		<serialnumber>lr3-3-y</serialnumber>
+    	<firmware_version>2.0.0</firmware_version>
+    	<bootloader_version>1.0.1.00</bootloader_version>
+    	<connection>Ethernet</connection>
+    	<ipaddress>192.168.2.23</ipaddress>
+    	<port>1061</port>
+		<protocol>TCP</protocol>
+		<connection_type>ETH</connection_type>
+		<network_device_id>\\Device\\NPF_{8DF14164-F172-44FD-B098-F8A888986224}</network_device_id>
+		<data_poll_frequency>0.03</data_poll_frequency>
+    	<xdf>src/config/motionlabFiles/eve-xcr/xdf/eve-net_1.6.0.xdf</xdf>
+    	<pos_limit_max>850</pos_limit_max>
+    	<pos_limit_min>0.0</pos_limit_min>
+    	<vel_limit_max>20.0</vel_limit_max>
+    	<vel_limit_min>0.0</vel_limit_min>
+    	<acc_limit_max>20.0</acc_limit_max>
+    	<acc_limit_min>0.0</acc_limit_min>
+		<position_offset_gui>590</position_offset_gui>
+		<invert_position>False</invert_position>
+        <motor name="HeiDrive">
+        	<id>2</id>
+        	<part_number>HMD08-020-048-30</part_number>
+        	<serialnumber>401989400001</serialnumber>
+            <xcf>heidrive.xcf</xcf>
+	    </motor>
+	</axis>
+	<axis name="Z-Axis" dev_mode="False" enabled="False">
+        <id>2</id>
+		<gui_uuid>A2AC5720-2B5A-4EBF-88DA-CAFB6A3D18F1</gui_uuid>
+		<axis_type>linear</axis_type>
+		<axis_direction>z</axis_direction>
+        <log_level>DEBUG</log_level>
+        <part_number>EVE-XCR-C</part_number>
+    	<product_code>46338049</product_code>
+    	<revision_number>196628</revision_number>
+		<serialnumber>lr3-3-z</serialnumber>
+    	<firmware_version>2.0.0</firmware_version>
+    	<bootloader_version>1.0.1.00</bootloader_version>
+    	<connection>Ethernet</connection>
+    	<ipaddress>192.168.3.24</ipaddress>
+    	<port>1061</port>
+		<protocol>TCP</protocol>
+		<connection_type>ETH</connection_type>
+		<network_device_id>\\Device\\NPF_{8DF14164-F172-44FD-B098-F8A888986224}</network_device_id>
+		<data_poll_frequency>0.03</data_poll_frequency>
+    	<xdf>src/config/motionlabFiles/eve-xcr/xdf/hdag_1.5.2.xdf</xdf>
+    	<pos_limit_max>1600.0</pos_limit_max>
+    	<pos_limit_min>0.0</pos_limit_min>
+    	<vel_limit_max>20.0</vel_limit_max>
+    	<vel_limit_min>0.0</vel_limit_min>
+    	<acc_limit_max>20.0</acc_limit_max>
+    	<acc_limit_min>0.0</acc_limit_min>
+		<position_offset_gui>-800</position_offset_gui>
+		<invert_position>True</invert_position>
+        <motor name="HeiDrive">
+        	<id>3</id>
+        	<part_number>HMD08-020-048-30</part_number>
+        	<serialnumber>401989400001</serialnumber>
+            <xcf>heidrive.xcf</xcf>
+	    </motor>
+	</axis>
+</linrob>

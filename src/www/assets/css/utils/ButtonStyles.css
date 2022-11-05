@@ -1,0 +1,40 @@
+.disableBtn:disabled {
+  background-color: gray;
+}
+
+.jogBtn:disabled {
+  opacity: 0.5;
+}
+
+.jogBtn {
+  outline: none;
+  box-shadow: none;
+}
+
+.jogBtn:active {
+  box-shadow: 0px 0px 14px 0px rgba(0,152,254,0.6039215686274509);
+}
+
+.jogBtn:disabled {
+  /*box-shadow: 0px 0px 14px 0px rgba(254,0,0,0.6039215686274509);*/
+}
+
+.btnDropDown {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+

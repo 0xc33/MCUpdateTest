@@ -1,0 +1,20 @@
+.toast-script-robot {
+  z-index: 999999999;
+}
+
+#linrob_footer {
+  position: relative;
+}
+
+.modal_orientation_change {
+  z-index: 99999999999999999999999;
+}
+
+.modal.fade {
+  z-index: 10000000 !important;
+}
+
+.modal_script_save {
+  z-index: 99999;
+}
+

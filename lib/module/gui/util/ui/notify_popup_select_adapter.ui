@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>810</width>
+    <height>557</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="windowOpacity">
+   <double>0.900000000000000</double>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/*-----QWidget-----*/
+QWidget
+{
+	background-color: #231F20;
+	color: #000000
+
+}
+
+/*-----QLabel-----*/
+QLabel
+{
+	background-color: transparent;
+	color: #c2c7d5;
+}
+
+/*-----QTableView &amp; QTableWidget-----*/
+QTableView
+{
+    background-color: #232939;
+	border: 1px solid gray;
+    color: #f0f0f0;
+    gridline-color: #232939;
+    outline : 0;
+
+}
+
+QTableView::disabled
+{
+    background-color: #242526;
+    border: 1px solid #32414B;
+    color: #656565;
+    gridline-color: #656565;
+    outline : 0;
+
+}
+
+QTableView::item:hover 
+{
+    background-color: #606060;
+    color: #f0f0f0;
+
+}
+
+QTableView::item:selected 
+{
+	background-color: #0ab19a;
+    color: #F0F0F0;
+
+}
+
+QTableView::item:selected:disabled
+{
+    background-color: #1a1b1c;
+    border: 2px solid #525251;
+    color: #656565;
+
+}
+
+QTableCornerButton::section
+{
+	background-color: #343a49;
+    color: #fff;
+
+}
+
+QHeaderView::section
+{
+	color: #fff;
+	border-top: 0px;
+	border-bottom: 1px solid gray;
+	border-right: 1px solid gray;
+	background-color: #343a49;
+    margin-top:1px;
+	margin-bottom:1px;
+	padding: 5px;
+
+}
+
+QHeaderView::section:disabled
+{
+    background-color: #525251;
+    color: #656565;
+
+}
+
+QHeaderView::section:checked
+{
+    color: #fff;
+    background-color: #0ab19a;
+
+}
+
+
+QHeaderView::section:checked:disabled
+{
+    color: #656565;
+    background-color: #525251;
+
+}
+
+QHeaderView::section::vertical::first,
+QHeaderView::section::vertical::only-one
+{
+    border-top: 1px solid #353635;
+
+}
+
+QHeaderView::section::vertical
+{
+    border-top: 1px solid #353635;
+
+}
+
+QHeaderView::section::horizontal::first,
+QHeaderView::section::horizontal::only-one
+{
+    border-left: 1px solid #353635;
+
+}
+
+QHeaderView::section::horizontal
+{
+    border-left: 1px solid #353635;
+
+}
+
+/*-----QScrollBar-----*/
+QScrollBar:horizontal 
+{
+    background-color: transparent;
+    height: 8px;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+QScrollBar::handle:horizontal 
+{
+    border: none;
+	min-width: 100px;
+    background-color: #56576c;
+
+}
+
+QScrollBar::add-line:horizontal, 
+QScrollBar::sub-line:horizontal,
+QScrollBar::add-page:horizontal, 
+QScrollBar::sub-page:horizontal 
+{
+    width: 0px;
+    background-color: transparent;
+
+}
+
+QScrollBar:vertical 
+{
+    background-color: transparent;
+    width: 8px;
+    margin: 0;
+
+}
+
+QScrollBar::handle:vertical 
+{
+    border: none;
+	min-height: 100px;
+    background-color: #56576c;
+
+}
+
+QScrollBar::add-line:vertical, 
+QScrollBar::sub-line:vertical,
+QScrollBar::add-page:vertical, 
+QScrollBar::sub-page:vertical 
+{
+    height: 0px;
+    background-color: transparent;
+
+}
+
+QPlainTextEdit
+{
+    background-color: #242526;
+    border: 1px solid #32414B;
+    color: #c2c7d5;
+    gridline-color: #656565;
+    outline : 0;
+}
+
+QTabWidget::pane {
+
+  top:-1px; 
+  background: rgb(245, 245, 245);;
+} 
+
+QTabBar::tab {
+  background: #56576c; 
+  border: 1px solid #32414B;
+  padding: 5px;
+  color: white;
+} 
+
+QTabBar::tab:selected { 
+  background: rgb(4, 163, 221); 
+  margin-bottom: -1px; 
+}
+
+QMenuBar {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 lightgray, stop:1 darkgray);
+}
+QMenuBar::item {
+    spacing: 3px;           
+    padding: 2px 10px;
+    background-color: rgb(210,105,30);
+    color: rgb(255,255,255);  
+    border-radius: 5px;
+}
+QMenuBar::item:selected {    
+    background-color: rgb(244,164,96);
+}
+QMenuBar::item:pressed {
+    background: rgb(128,0,0);
+}
+
+QMenu {
+    background-color: #56576c;   
+    border: 1px solid  rgb(4, 163, 221);
+    margin: 2px;
+}
+QMenu::item {
+    background-color: transparent;
+ 	color: white;
+}
+QMenu::item:selected { 
+    background-color: rgb(4, 163, 221);
+   
+}
+
+
+/*-----QComboBox-----*/
+QComboBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+    border: 1px solid #32414B;
+}
+QListView
+{
+	background-color: #231F20;
+	color: #c2c7d5;
+    border: 1px solid #32414B;
+}
+QCheckBox::indicator:checked
+{
+    image:url(&quot;./ressources/check.png&quot;);
+	background-color:  rgb(170, 255, 127);
+    border: 1px solid rgb(170, 255, 127);
+
+}
+
+QCheckBox::indicator:unchecked
+{
+    image:url(&quot;./ressources/check.png&quot;);
+	background-color: rgb(255, 116, 116);
+    border: 1px solid rgb(255, 116, 116);
+
+}
+
+QMessageBox {
+    background-color: #231F20;
+}
+
+QMessageBox QLabel {
+    color: #aaa;
+}
+
+QProgressBar {
+    border-radius: 6px;
+    background-color: #231F20;
+}
+QProgressBar::chunk {
+    border-radius: 6px;
+    background-color: #0097FE;
+}
+
+QLineEdit
+{
+	background-color: transparent;
+	color: #c2c7d5;
+ 	border: 1px solid #32414B;
+}
+</string>
+  </property>
+  <widget class="QLabel" name="txt_info">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>771</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>No Valid Networkadapter found, Choose another one!</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cb_axis_connection">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>190</y>
+     <width>131</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="editable">
+    <bool>false</bool>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+   <item>
+    <property name="text">
+     <string>Ethernet</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Serial</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="lbl_axis_ecat_slave_id">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>170</y>
+     <width>131</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+    </font>
+   </property>
+   <property name="text">
+    <string>EtherCAT Slave ID:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_axis_protocol">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>170</y>
+     <width>161</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+    </font>
+   </property>
+   <property name="text">
+    <string>Connection Protocol:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_axis_port">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>220</y>
+     <width>131</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+    </font>
+   </property>
+   <property name="text">
+    <string>Port:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_axis_xdf_file">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>320</y>
+     <width>711</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+    </font>
+   </property>
+   <property name="text">
+    <string>XDF File:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cb_axis_connection_type">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>190</y>
+     <width>131</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="editable">
+    <bool>false</bool>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+   <item>
+    <property name="text">
+     <string>EtherNET</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>EtherCAT</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="cb_tcp_network_adapter">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>240</y>
+     <width>371</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="editable">
+    <bool>false</bool>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_axis_ipAdr">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>220</y>
+     <width>131</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+    </font>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="text">
+    <string>IP Address:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cb_axis_protocol">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>190</y>
+     <width>161</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="editable">
+    <bool>false</bool>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+   <item>
+    <property name="text">
+     <string>UDP</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>TCP</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="lbl_axis_data_poll_freq">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>270</y>
+     <width>131</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+    </font>
+   </property>
+   <property name="text">
+    <string>Data Poll Frequency [ms]:</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="nbr_axis_ecat_slave_id">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>190</y>
+     <width>131</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSpinBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 13px;
+ border: 1px solid #32414B;
+}</string>
+   </property>
+   <property name="maximum">
+    <number>69000</number>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_axis_connection_type">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>170</y>
+     <width>131</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+    </font>
+   </property>
+   <property name="text">
+    <string>Connection Type:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_axis_ipAdr">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>240</y>
+     <width>131</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+    </font>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;IP Address for given Servo Controller, only needed in EtherNET connection mode!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="inputMask">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="nbr_axis_port">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>240</y>
+     <width>131</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSpinBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 13px;
+ border: 1px solid #32414B;
+}</string>
+   </property>
+   <property name="maximum">
+    <number>69000</number>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_axis_connection">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>170</y>
+     <width>131</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+    </font>
+   </property>
+   <property name="text">
+    <string>Connection:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cb_axis_xdf_file">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>340</y>
+     <width>711</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="editable">
+    <bool>false</bool>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_axis_network_device_id">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>220</y>
+     <width>371</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+    </font>
+   </property>
+   <property name="toolTip">
+    <string>Choose Network Adapter for Network ID, only needed in EtherCAT connection mode!</string>
+   </property>
+   <property name="text">
+    <string>Network Adapter [only EtherCAT]:</string>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="nbr_axis_data_poll_freq">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>290</y>
+     <width>131</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QDoubleSpinBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+    border: 1px solid #32414B;
+}</string>
+   </property>
+   <property name="minimum">
+    <double>-99999999.000000000000000</double>
+   </property>
+   <property name="maximum">
+    <double>99999999.000000000000000</double>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

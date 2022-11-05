@@ -1,0 +1,45 @@
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+header {
+  min-height: 50px;
+  background: lightcyan;
+}
+
+footer {
+  min-height: 50px;
+  background: PapayaWhip;
+}
+
+/* Trick */
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.progressbar {
+  position: relative;
+  width: 100%;
+  margin: 30px auto 0;
+  height: 30px;
+  background: #274545;
+  overflow: hidden;
+}
+
+span.progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  background: #326666;
+  transition: all .3s;
+}
+

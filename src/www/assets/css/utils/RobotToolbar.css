@@ -1,0 +1,352 @@
+a, a:hover, a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+audio {
+  display: none;
+}
+
+input, select, textarea {
+  color: #d1d1d1;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+a {
+  color: rgb(255,255,255);
+}
+
+input, select, textarea {
+  color: #d1d1d1;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+a {
+  color: rgb(255,255,255);
+}
+
+a, .button {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+a:focus, .button:focus, button:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+a:focus, a:hover, .portfolio-cat a:hover, .footer -menu li a:hover {
+  text-decoration: none;
+  color: #1F1F1F;
+}
+
+a, button {
+  color: #1F1F1F;
+  outline: medium none;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 28px;
+  color: rgb(147,147,147);
+  margin-bottom: 13px;
+  font-family: "Lora", sans-serif;
+}
+
+a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:focus, a:hover, .portfolio-cat a:hover, .footer -menu li a:hover {
+  text-decoration: none;
+  color: #1F1F1F;
+}
+
+a:focus, .button:focus, button:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+div {
+}
+
+a:active {
+  background: rgba(0,0,0,0);
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:focus, .button:focus, button:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+a:focus, a:hover, .portfolio-cat a:hover, .footer -menu li a:hover {
+  text-decoration: none;
+  color: #1F1F1F;
+}
+
+a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:focus, a:hover, .portfolio-cat a:hover, .footer -menu li a:hover {
+  text-decoration: none;
+  color: #1F1F1F;
+}
+
+a:focus, .button:focus, button:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+div {
+}
+
+a:active {
+  background: rgba(0,0,0,0);
+}
+
+h1 {
+  font-family: arial black;
+  font-size: 50px;
+  color: white;
+  margin: 0px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+a, .button {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+a:focus, .button:focus, button:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+a:focus, a:hover, .portfolio-cat a:hover, .footer -menu li a:hover {
+  text-decoration: none;
+  color: #1F1F1F;
+}
+
+a, button {
+  color: #1F1F1F;
+  outline: medium none;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 28px;
+  color: rgb(147,147,147);
+  margin-bottom: 13px;
+  font-family: "Lora", sans-serif;
+}
+
+a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:focus, a:hover, .portfolio-cat a:hover, .footer -menu li a:hover {
+  text-decoration: none;
+  color: #1F1F1F;
+}
+
+a:focus, .button:focus, button:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:active {
+  background: rgba(0,0,0,0);
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:focus, .button:focus, button:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+a:focus, a:hover, .portfolio-cat a:hover, .footer -menu li a:hover {
+  text-decoration: none;
+  color: #1F1F1F;
+}
+
+a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:focus, a:hover, .portfolio-cat a:hover, .footer -menu li a:hover {
+  text-decoration: none;
+  color: #1F1F1F;
+}
+
+a:focus, .button:focus, button:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:active {
+  background: rgba(0,0,0,0);
+}
+
+h1 {
+  font-family: arial black;
+  font-size: 50px;
+  color: white;
+  margin: 0px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+div {
+}
+
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button, input {
+  overflow: visible;
+}
+
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+

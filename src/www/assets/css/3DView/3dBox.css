@@ -1,0 +1,80 @@
+#robot_view {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  position: fixed;
+  background: #1C1C1C;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.noselect {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#gui {
+  opacity: 0.7;
+}
+
+.noScroll {
+  overflow: hidden;
+  position: fixed;
+}
+
+.toast-body {
+  overflow-y: scroll;
+  height: auto;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0097FE;
+}
+
+* {
+  -webkit-user-select: text;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.main {
+  font-size: 120%;
+  color: red;
+}
+
+.modal-content {
+  background: var(--bs-dark);
+}
+
+.close {
+  color: #fff;
+  opacity: 1;
+}
+
+.z-index-max {
+  z-index: 99;
+}
+
+.z-index-modal {
+  z-index: 99999999999999999999999;
+}
+

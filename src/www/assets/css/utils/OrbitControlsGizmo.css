@@ -1,0 +1,21 @@
+.obit-controls-gizmo {
+  position: relative;
+  right: 9.5em;
+  bottom: 5em;
+  z-index: 50;
+  background-color: #b7040400;
+  border-radius: 100%;
+  transition: background-color .15s linear;
+  cursor: pointer;
+  width: 6em;
+  height: 6em;
+}
+
+.obit-controls-gizmo.dragging, .obit-controls-gizmo:hover {
+}
+
+.obit-controls-gizmo.inactive {
+  pointer-events: none;
+  background-color: #FFF0 !important;
+}
+

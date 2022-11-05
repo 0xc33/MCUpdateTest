@@ -1,0 +1,7 @@
+openssl genrsa -aes256 -out ca.key 4096
+
+openssl req -x509 -new -nodes -key ca.key -days 3650 -out ca.pem -subj "/CN=linrob GmbH"
+
+openssl req -nodes -newkey rsa:2048 -keyout server.key -out server.csr -subj="/CN=ce3raz3r"
+
+openssl x509 -req -in server.csr -CA ca.pem -CAkey ca.key -CAcreateserial -out server.crt -days 3650 -extensions EXT -extfile v3.ext

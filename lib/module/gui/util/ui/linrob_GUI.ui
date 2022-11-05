@@ -1,0 +1,6192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>linrobGUI</class>
+ <widget class="QMainWindow" name="linrobGUI">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>810</width>
+    <height>557</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Arial</family>
+    <pointsize>8</pointsize>
+   </font>
+  </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
+  </property>
+  <property name="tabletTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>linrob Robot</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../../../../../../.designer/img/LR_black.ico</normaloff>../../../../../../../.designer/img/LR_black.ico</iconset>
+  </property>
+  <property name="windowOpacity">
+   <double>0.900000000000000</double>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/*-----QWidget-----*/
+QWidget
+{
+	background-color: #231F20;
+	color: #000000
+
+}
+
+QToolBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+
+}
+   QToolBox::tab {
+            background: blue;
+            border-radius: 5px;
+            color: black;
+        }
+
+QToolBox::tab {
+  background: #56576c; 
+  border: 1px solid #32414B;
+  padding:1px;
+  color: white;
+} 
+
+QToolBox::tab:selected { 
+  background: rgb(4, 163, 221); 
+  margin-bottom: -1px; 
+}
+
+/*-----QPushButton-----*/
+QPushButton
+{
+	background-color: rgb(4, 163, 221);
+	color: #fff;
+	font-size: 11px;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	padding: 5px;
+
+}
+
+
+QPushButton::pressed
+{
+	background-color: rgb(3, 115, 213);
+
+}
+
+/*-----QLabel-----*/
+QLabel
+{
+	background-color: transparent;
+	color: #c2c7d5;
+}
+
+/*-----QTableView &amp; QTableWidget-----*/
+QTableView
+{
+    background-color: #232939;
+	border: 1px solid gray;
+    color: #f0f0f0;
+    gridline-color: #232939;
+    outline : 0;
+
+}
+
+QSpinBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+    border: 1px solid #32414B;
+}
+
+QDoubleSpinBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+    border: 1px solid #32414B;
+}
+
+QTableView::disabled
+{
+    background-color: #242526;
+    border: 1px solid #32414B;
+    color: #656565;
+    gridline-color: #656565;
+    outline : 0;
+
+}
+
+QTableView::item:hover 
+{
+    background-color: #606060;
+    color: #f0f0f0;
+
+}
+
+QTableView::item:selected 
+{
+	background-color: #0ab19a;
+    color: #F0F0F0;
+
+}
+
+QTableView::item:selected:disabled
+{
+    background-color: #1a1b1c;
+    border: 2px solid #525251;
+    color: #656565;
+
+}
+
+QTableCornerButton::section
+{
+	background-color: #343a49;
+    color: #fff;
+
+}
+
+QHeaderView::section
+{
+	color: #fff;
+	border-top: 0px;
+	border-bottom: 1px solid gray;
+	border-right: 1px solid gray;
+	background-color: #343a49;
+    margin-top:1px;
+	margin-bottom:1px;
+	padding: 5px;
+
+}
+
+QHeaderView::section:disabled
+{
+    background-color: #525251;
+    color: #656565;
+
+}
+
+QHeaderView::section:checked
+{
+    color: #fff;
+    background-color: #0ab19a;
+
+}
+
+
+QHeaderView::section:checked:disabled
+{
+    color: #656565;
+    background-color: #525251;
+
+}
+
+QHeaderView::section::vertical::first,
+QHeaderView::section::vertical::only-one
+{
+    border-top: 1px solid #353635;
+
+}
+
+QHeaderView::section::vertical
+{
+    border-top: 1px solid #353635;
+
+}
+
+QHeaderView::section::horizontal::first,
+QHeaderView::section::horizontal::only-one
+{
+    border-left: 1px solid #353635;
+
+}
+
+QHeaderView::section::horizontal
+{
+    border-left: 1px solid #353635;
+
+}
+
+/*-----QScrollBar-----*/
+QScrollBar:horizontal 
+{
+    background-color: transparent;
+    height: 8px;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+QScrollBar::handle:horizontal 
+{
+    border: none;
+	min-width: 100px;
+    background-color: #56576c;
+
+}
+
+QScrollBar::add-line:horizontal, 
+QScrollBar::sub-line:horizontal,
+QScrollBar::add-page:horizontal, 
+QScrollBar::sub-page:horizontal 
+{
+    width: 0px;
+    background-color: transparent;
+
+}
+
+QScrollBar:vertical 
+{
+    background-color: transparent;
+    width: 8px;
+    margin: 0;
+
+}
+
+QScrollBar::handle:vertical 
+{
+    border: none;
+	min-height: 100px;
+    background-color: #56576c;
+
+}
+
+QScrollBar::add-line:vertical, 
+QScrollBar::sub-line:vertical,
+QScrollBar::add-page:vertical, 
+QScrollBar::sub-page:vertical 
+{
+    height: 0px;
+    background-color: transparent;
+
+}
+
+QPlainTextEdit
+{
+    background-color: #242526;
+    border: 1px solid #32414B;
+    color: #c2c7d5;
+    gridline-color: #656565;
+    outline : 0;
+}
+
+QTabWidget::pane {
+
+  top:-1px; 
+  background: rgb(245, 245, 245);;
+} 
+
+QTabBar::tab {
+  background: #56576c; 
+  border: 1px solid #32414B;
+  padding: 5px;
+  color: white;
+} 
+
+QTabBar::tab:selected { 
+  background: rgb(4, 163, 221); 
+  margin-bottom: -1px; 
+}
+
+QMenuBar {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 lightgray, stop:1 darkgray);
+}
+QMenuBar::item {
+    spacing: 3px;           
+    padding: 2px 10px;
+    background-color: rgb(210,105,30);
+    color: rgb(255,255,255);  
+    border-radius: 5px;
+}
+QMenuBar::item:selected {    
+    background-color: rgb(244,164,96);
+}
+QMenuBar::item:pressed {
+    background: rgb(128,0,0);
+}
+
+QMenu {
+    background-color: #56576c;   
+    border: 1px solid  rgb(4, 163, 221);
+    margin: 2px;
+}
+QMenu::item {
+    background-color: transparent;
+ 	color: white;
+}
+QMenu::item:selected { 
+    background-color: rgb(4, 163, 221);
+   
+}
+
+
+/*-----QComboBox-----*/
+QComboBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+    border: 1px solid #32414B;
+}
+QListView
+{
+	background-color: #231F20;
+	color: #c2c7d5;
+    border: 1px solid #32414B;
+}
+QCheckBox::indicator:checked
+{
+	background-color:  rgb(170, 255, 127);
+    border: 1px solid rgb(170, 255, 127);
+
+}
+
+QCheckBox::indicator:unchecked
+{
+	background-color: rgb(255, 116, 116);
+    border: 1px solid rgb(255, 116, 116);
+
+}
+
+QMessageBox {
+    background-color: #231F20;
+}
+
+QMessageBox QLabel {
+    color: #aaa;
+}
+
+QProgressBar {
+    border-radius: 6px;
+    background-color: #231F20;
+}
+QProgressBar::chunk {
+    border-radius: 6px;
+    background-color: #0097FE;
+}
+</string>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="lbl_lr_logo">
+    <property name="geometry">
+     <rect>
+      <x>3</x>
+      <y>-3</y>
+      <width>190</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>7</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_minimize_app">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>10</y>
+      <width>51</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>-1</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimize to tray bar&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/*-----QPushButton-----*/
+QPushButton
+{
+	background-color:rgba(255, 255, 255, 0);
+	color: #fff;
+	font-size: 11px;
+	font-weight: bold;
+	border: 0px;
+	border-radius: 3px;
+	padding: 5px;
+
+}
+
+
+QPushButton::pressed
+{
+	background-color:rgb(240, 240, 240, 10);
+
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>50</width>
+      <height>50</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tab_main_content">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>781</width>
+      <height>491</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>8</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+/*-----QCheckBox-----*/
+QCheckBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 10px;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+
+}
+
+QLineEdit
+{
+	background-color: transparent;
+	color: #c2c7d5;
+    border: 1px solid #32414B;
+}
+
+/*-----QCheckBox-----*/
+QCheckBox::indicator
+{
+    color: #b1b1b1;
+    background-color: #323232;
+    border: 1px solid darkgray;
+    width: 12px;
+    height: 12px;
+
+}
+
+
+QCheckBox::indicator:checked
+{
+    image:url(&quot;./ressources/check.png&quot;);
+	background-color:  rgb(170, 255, 127);
+    border: 1px solid rgb(170, 255, 127);
+
+}
+
+QCheckBox::indicator:unchecked
+{
+    image:url(&quot;./ressources/check.png&quot;);
+	background-color: rgb(255, 116, 116);
+    border: 1px solid rgb(255, 116, 116);
+
+}
+
+
+
+</string>
+    </property>
+    <property name="tabPosition">
+     <enum>QTabWidget::North</enum>
+    </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Rounded</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab_overview">
+     <attribute name="title">
+      <string>Overview</string>
+     </attribute>
+     <widget class="QToolBox" name="toolbox_overview">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>771</width>
+        <height>421</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QToolBox
+
+{
+	background-color: transparent;
+	color: #c2c7d5;
+}
+   QToolBox::tab {
+      background: blue;
+      border-radius: 5px;
+      color: black;
+        }
+
+QToolBox::tab {
+  background: #56576c; 
+  border: 1px solid #32414B;
+  padding:1px;
+  color: white;
+} 
+
+QToolBox::tab:selected { 
+  background: rgb(4, 163, 221); 
+  margin-bottom: -1px; 
+}
+
+/*-----QWidget-----*/
+QWidget
+{
+	background-color: #231F20;
+	color: #000000
+
+}
+
+/*-----QLabel-----*/
+QLabel
+{
+	background-color: transparent;
+	color: #c2c7d5;
+}
+
+/*-----QTableView &amp; QTableWidget-----*/
+QTableView
+{
+    background-color: #232939;
+	border: 1px solid gray;
+    color: #f0f0f0;
+    gridline-color: #232939;
+    outline : 0;
+
+}
+
+QTableView::disabled
+{
+    background-color: #242526;
+    border: 1px solid #32414B;
+    color: #656565;
+    gridline-color: #656565;
+    outline : 0;
+
+}
+
+QTableView::item:hover 
+{
+    background-color: #606060;
+    color: #f0f0f0;
+
+}
+
+QTableView::item:selected 
+{
+	background-color: #0ab19a;
+    color: #F0F0F0;
+
+}
+
+QTableView::item:selected:disabled
+{
+    background-color: #1a1b1c;
+    border: 2px solid #525251;
+    color: #656565;
+
+}
+
+QTableCornerButton::section
+{
+	background-color: #343a49;
+    color: #fff;
+
+}
+
+QHeaderView::section
+{
+	color: #fff;
+	border-top: 0px;
+	border-bottom: 1px solid gray;
+	border-right: 1px solid gray;
+	background-color: #343a49;
+    margin-top:1px;
+	margin-bottom:1px;
+	padding: 5px;
+
+}
+
+QHeaderView::section:disabled
+{
+    background-color: #525251;
+    color: #656565;
+
+}
+
+QHeaderView::section:checked
+{
+    color: #fff;
+    background-color: #0ab19a;
+
+}
+
+
+QHeaderView::section:checked:disabled
+{
+    color: #656565;
+    background-color: #525251;
+
+}
+
+QHeaderView::section::vertical::first,
+QHeaderView::section::vertical::only-one
+{
+    border-top: 1px solid #353635;
+
+}
+
+QHeaderView::section::vertical
+{
+    border-top: 1px solid #353635;
+
+}
+
+QHeaderView::section::horizontal::first,
+QHeaderView::section::horizontal::only-one
+{
+    border-left: 1px solid #353635;
+
+}
+
+QHeaderView::section::horizontal
+{
+    border-left: 1px solid #353635;
+
+}
+
+/*-----QScrollBar-----*/
+QScrollBar:horizontal 
+{
+    background-color: transparent;
+    height: 8px;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+QScrollBar::handle:horizontal 
+{
+    border: none;
+	min-width: 100px;
+    background-color: #56576c;
+
+}
+
+QScrollBar::add-line:horizontal, 
+QScrollBar::sub-line:horizontal,
+QScrollBar::add-page:horizontal, 
+QScrollBar::sub-page:horizontal 
+{
+    width: 0px;
+    background-color: transparent;
+
+}
+
+QScrollBar:vertical 
+{
+    background-color: transparent;
+    width: 8px;
+    margin: 0;
+
+}
+
+QScrollBar::handle:vertical 
+{
+    border: none;
+	min-height: 100px;
+    background-color: #56576c;
+
+}
+
+QScrollBar::add-line:vertical, 
+QScrollBar::sub-line:vertical,
+QScrollBar::add-page:vertical, 
+QScrollBar::sub-page:vertical 
+{
+    height: 0px;
+    background-color: transparent;
+
+}
+
+QPlainTextEdit
+{
+    background-color: #242526;
+    border: 1px solid #32414B;
+    color: #c2c7d5;
+    gridline-color: #656565;
+    outline : 0;
+}
+
+QTabWidget::pane {
+
+  top:-1px; 
+  background: rgb(245, 245, 245);;
+} 
+
+QTabBar::tab {
+  background: #56576c; 
+  border: 1px solid #32414B;
+  padding: 5px;
+  color: white;
+} 
+
+QTabBar::tab:selected { 
+  background: rgb(4, 163, 221); 
+  margin-bottom: -1px; 
+}
+
+QMenuBar {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 lightgray, stop:1 darkgray);
+}
+QMenuBar::item {
+    spacing: 3px;           
+    padding: 2px 10px;
+    background-color: rgb(210,105,30);
+    color: rgb(255,255,255);  
+    border-radius: 5px;
+}
+QMenuBar::item:selected {    
+    background-color: rgb(244,164,96);
+}
+QMenuBar::item:pressed {
+    background: rgb(128,0,0);
+}
+
+QMenu {
+    background-color: #56576c;   
+    border: 1px solid  rgb(4, 163, 221);
+    margin: 2px;
+}
+QMenu::item {
+    background-color: transparent;
+ 	color: white;
+}
+QMenu::item:selected { 
+    background-color: rgb(4, 163, 221);
+   
+}
+
+
+/*-----QComboBox-----*/
+QComboBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+    border: 1px solid #32414B;
+}
+QListView
+{
+	background-color: #231F20;
+	color: #c2c7d5;
+    border: 1px solid #32414B;
+}
+QCheckBox::indicator:checked
+{
+    image:url(&quot;./ressources/check.png&quot;);
+	background-color:  rgb(170, 255, 127);
+    border: 1px solid rgb(170, 255, 127);
+
+}
+
+QCheckBox::indicator:unchecked
+{
+    image:url(&quot;./ressources/check.png&quot;);
+	background-color: rgb(255, 116, 116);
+    border: 1px solid rgb(255, 116, 116);
+
+}
+
+QMessageBox {
+    background-color: #231F20;
+}
+
+QMessageBox QLabel {
+    color: #aaa;
+}
+
+QProgressBar {
+    border-radius: 6px;
+    background-color: #231F20;
+}
+QProgressBar::chunk {
+    border-radius: 6px;
+    background-color: #0097FE;
+}
+</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page_overview">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>771</width>
+         <height>367</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>Robot Overview</string>
+       </attribute>
+       <widget class="QPushButton" name="btn_overview_restart_robot">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>320</y>
+          <width>161</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>-1</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*-----QPushButton-----*/
+QPushButton
+{
+	background-color: rgb(4, 163, 221);
+	color: #fff;
+	font-size: 11px;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	padding: 5px;
+
+}
+
+
+QPushButton::pressed
+{
+	background-color: rgb(3, 115, 213);
+
+}</string>
+        </property>
+        <property name="text">
+         <string>Restart Robot</string>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="chk_overview_tcp_active">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>110</y>
+          <width>581</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>-1</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+/*-----QCheckBox-----*/
+QCheckBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 10px;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+
+}
+
+
+/*-----QCheckBox-----*/
+QCheckBox::indicator
+{
+    color: #b1b1b1;
+    background-color: #323232;
+    border: 1px solid darkgray;
+    width: 12px;
+    height: 12px;
+
+}
+
+
+QCheckBox::indicator:checked
+{
+    image:url(&quot;./ressources/check.png&quot;);
+	background-color:  rgb(170, 255, 127);
+    border: 1px solid rgb(170, 255, 127);
+
+}
+
+QCheckBox::indicator:unchecked
+{
+    image:url(&quot;./ressources/check.png&quot;);
+	background-color: rgb(255, 116, 116);
+    border: 1px solid rgb(255, 116, 116);
+
+}
+
+
+
+</string>
+        </property>
+        <property name="text">
+         <string>Webserver</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_overview_shutdown_robot">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>280</y>
+          <width>161</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>-1</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*-----QPushButton-----*/
+QPushButton
+{
+	background-color: rgb(4, 163, 221);
+	color: #fff;
+	font-size: 11px;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	padding: 5px;
+
+}
+
+
+QPushButton::pressed
+{
+	background-color: rgb(3, 115, 213);
+
+}</string>
+        </property>
+        <property name="text">
+         <string>Shutdown Robot</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_overview_number_of_axis">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>581</width>
+          <height>18</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Connected Axes: 0</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_overview_robot_port">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>70</y>
+          <width>581</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Robot Port:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_overview_connected_clients">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>581</width>
+          <height>18</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Connected Web Clients: 0</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="chk_overview_ftp_active">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>130</y>
+          <width>581</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>-1</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+/*-----QCheckBox-----*/
+QCheckBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 10px;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+
+}
+
+
+/*-----QCheckBox-----*/
+QCheckBox::indicator
+{
+    color: #b1b1b1;
+    background-color: #323232;
+    border: 1px solid darkgray;
+    width: 12px;
+    height: 12px;
+
+}
+
+
+QCheckBox::indicator:checked
+{
+    image:url(&quot;./ressources/check.png&quot;);
+	background-color:  rgb(170, 255, 127);
+    border: 1px solid rgb(170, 255, 127);
+
+}
+
+QCheckBox::indicator:unchecked
+{
+    image:url(&quot;./ressources/check.png&quot;);
+	background-color: rgb(255, 116, 116);
+    border: 1px solid rgb(255, 116, 116);
+
+}
+
+
+
+</string>
+        </property>
+        <property name="text">
+         <string>FTP Server</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="chk_overview_xmlrpc_server_active">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>190</y>
+          <width>581</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>-1</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+/*-----QCheckBox-----*/
+QCheckBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 10px;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+
+}
+
+
+/*-----QCheckBox-----*/
+QCheckBox::indicator
+{
+    color: #b1b1b1;
+    background-color: #323232;
+    border: 1px solid darkgray;
+    width: 12px;
+    height: 12px;
+
+}
+
+
+QCheckBox::indicator:checked
+{
+    image:url(&quot;./ressources/check.png&quot;);
+	background-color:  rgb(170, 255, 127);
+    border: 1px solid rgb(170, 255, 127);
+
+}
+
+QCheckBox::indicator:unchecked
+{
+    image:url(&quot;./ressources/check.png&quot;);
+	background-color: rgb(255, 116, 116);
+    border: 1px solid rgb(255, 116, 116);
+
+}
+
+
+
+</string>
+        </property>
+        <property name="text">
+         <string>XML RPC Server</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_overview_open_webserver">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>240</y>
+          <width>161</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>-1</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*-----QPushButton-----*/
+QPushButton
+{
+	background-color: rgb(4, 163, 221);
+	color: #fff;
+	font-size: 11px;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	padding: 5px;
+
+}
+
+
+QPushButton::pressed
+{
+	background-color: rgb(3, 115, 213);
+
+}</string>
+        </property>
+        <property name="text">
+         <string>Open Webserver</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_overview_robot_ip">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>50</y>
+          <width>581</width>
+          <height>18</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Robot IP:</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="chk_overview_rtde_client_active">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>170</y>
+          <width>581</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>-1</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+/*-----QCheckBox-----*/
+QCheckBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 10px;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+
+}
+
+
+/*-----QCheckBox-----*/
+QCheckBox::indicator
+{
+    color: #b1b1b1;
+    background-color: #323232;
+    border: 1px solid darkgray;
+    width: 12px;
+    height: 12px;
+
+}
+
+
+QCheckBox::indicator:checked
+{
+    image:url(&quot;./ressources/check.png&quot;);
+	background-color:  rgb(170, 255, 127);
+    border: 1px solid rgb(170, 255, 127);
+
+}
+
+QCheckBox::indicator:unchecked
+{
+    image:url(&quot;./ressources/check.png&quot;);
+	background-color: rgb(255, 116, 116);
+    border: 1px solid rgb(255, 116, 116);
+
+}
+
+
+
+</string>
+        </property>
+        <property name="text">
+         <string>RTDE Client</string>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_3d_model">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>0</y>
+          <width>571</width>
+          <height>361</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+         </font>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="chk_overview_tcp_ext_active">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>150</y>
+          <width>581</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>-1</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+/*-----QCheckBox-----*/
+QCheckBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 10px;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+
+}
+
+
+/*-----QCheckBox-----*/
+QCheckBox::indicator
+{
+    color: #b1b1b1;
+    background-color: #323232;
+    border: 1px solid darkgray;
+    width: 12px;
+    height: 12px;
+
+}
+
+
+QCheckBox::indicator:checked
+{
+    image:url(&quot;./ressources/check.png&quot;);
+	background-color:  rgb(170, 255, 127);
+    border: 1px solid rgb(170, 255, 127);
+
+}
+
+QCheckBox::indicator:unchecked
+{
+    image:url(&quot;./ressources/check.png&quot;);
+	background-color: rgb(255, 116, 116);
+    border: 1px solid rgb(255, 116, 116);
+
+}
+
+
+
+</string>
+        </property>
+        <property name="text">
+         <string>TCP Socket Server</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <zorder>btn_overview_shutdown_robot</zorder>
+       <zorder>btn_overview_restart_robot</zorder>
+       <zorder>btn_overview_open_webserver</zorder>
+       <zorder>lbl_overview_number_of_axis</zorder>
+       <zorder>lbl_overview_robot_ip</zorder>
+       <zorder>lbl_overview_robot_port</zorder>
+       <zorder>chk_overview_tcp_active</zorder>
+       <zorder>chk_overview_ftp_active</zorder>
+       <zorder>chk_overview_tcp_ext_active</zorder>
+       <zorder>chk_overview_xmlrpc_server_active</zorder>
+       <zorder>chk_overview_rtde_client_active</zorder>
+       <zorder>lbl_overview_connected_clients</zorder>
+       <zorder>frame_3d_model</zorder>
+      </widget>
+      <widget class="QWidget" name="page_overview_log">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>771</width>
+         <height>367</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>Robot Status</string>
+       </attribute>
+       <widget class="QPlainTextEdit" name="txt_lr_log_viewer">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>771</width>
+          <height>361</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="tabletTracking">
+         <bool>true</bool>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Panel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+        <property name="plainText">
+         <string notr="true"/>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="lbl_overview_app_version">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>440</y>
+        <width>771</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>Version: </string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_login">
+     <attribute name="title">
+      <string>Login</string>
+     </attribute>
+     <widget class="QLineEdit" name="txt_userlogin_password">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>220</y>
+        <width>371</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Password</string>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::PasswordEchoOnEdit</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_userlogin_password">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>200</y>
+        <width>111</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>User Password:</string>
+      </property>
+      <property name="setVisible" stdset="0">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_userlogin_name">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>150</y>
+        <width>111</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>Username:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cb_userlogin_name">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>170</y>
+        <width>371</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="editable">
+       <bool>false</bool>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_userlogin_login">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>250</y>
+        <width>371</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>-1</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Login</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_login_logo">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>60</y>
+        <width>71</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../../../../../../.designer/img/login.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_userlogin_logout">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>200</y>
+        <width>371</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>-1</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Logout</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_login_hint">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>280</y>
+        <width>371</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>&lt; Login Hint &gt;</string>
+      </property>
+     </widget>
+     <zorder>btn_userlogin_logout</zorder>
+     <zorder>txt_userlogin_password</zorder>
+     <zorder>lbl_userlogin_password</zorder>
+     <zorder>lbl_userlogin_name</zorder>
+     <zorder>cb_userlogin_name</zorder>
+     <zorder>btn_userlogin_login</zorder>
+     <zorder>lbl_login_logo</zorder>
+     <zorder>lbl_login_hint</zorder>
+    </widget>
+    <widget class="QWidget" name="tab_settings">
+     <attribute name="title">
+      <string>Settings</string>
+     </attribute>
+     <widget class="QTabWidget" name="tab_settings_main">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>781</width>
+        <height>431</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::North</enum>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="tab_robot_config">
+       <attribute name="title">
+        <string>Robot Configuration</string>
+       </attribute>
+       <widget class="QToolBox" name="toolbox_robot">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>10</y>
+          <width>771</width>
+          <height>381</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>8</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="page_robot_general_settings">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>771</width>
+           <height>327</height>
+          </rect>
+         </property>
+         <attribute name="label">
+          <string>General Robot Settings</string>
+         </attribute>
+         <widget class="QLabel" name="lbl_robot_id">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>60</y>
+            <width>51</width>
+            <height>18</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+           </font>
+          </property>
+          <property name="text">
+           <string>ID:</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lbl_robot_serialnumber">
+          <property name="geometry">
+           <rect>
+            <x>250</x>
+            <y>10</y>
+            <width>521</width>
+            <height>18</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+           </font>
+          </property>
+          <property name="text">
+           <string>Serialnumber:</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="txt_robot_serialnumber">
+          <property name="geometry">
+           <rect>
+            <x>250</x>
+            <y>30</y>
+            <width>521</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lbl_robot_gui_3d_model">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>110</y>
+            <width>231</width>
+            <height>18</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+           </font>
+          </property>
+          <property name="text">
+           <string>GUI 3D Model File:</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lbl_robot_name">
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>60</y>
+            <width>161</width>
+            <height>18</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+           </font>
+          </property>
+          <property name="text">
+           <string>Robot Name:</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="txt_robot_name">
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>80</y>
+            <width>161</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="nbr_robot_id">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>80</y>
+            <width>51</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="frame">
+           <bool>true</bool>
+          </property>
+          <property name="maximum">
+           <number>69000</number>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="chk_robot_active">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>160</y>
+            <width>171</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>-1</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Activate Robot Configuration</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lbl_select_robot">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>231</width>
+            <height>18</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+           </font>
+          </property>
+          <property name="text">
+           <string>Select Robot from Database:</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="cb_robot_config_select_robot">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>30</y>
+            <width>231</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="editable">
+           <bool>false</bool>
+          </property>
+          <property name="placeholderText">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="cb_robot_3d_models">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>130</y>
+            <width>231</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="editable">
+           <bool>false</bool>
+          </property>
+          <property name="placeholderText">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="ico_robot_3d_model_error">
+          <property name="geometry">
+           <rect>
+            <x>250</x>
+            <y>130</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;3D Model file from path in DataBase does not exist on this System, choose another one!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="toolTipDuration">
+           <number>-1</number>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_robot_logger_settings">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>100</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <attribute name="label">
+          <string>Logger Settings</string>
+         </attribute>
+         <widget class="QLabel" name="lbl_robot_log_name">
+          <property name="geometry">
+           <rect>
+            <x>170</x>
+            <y>10</y>
+            <width>141</width>
+            <height>18</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+           </font>
+          </property>
+          <property name="text">
+           <string>Logger Name:</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="txt_robot_logger_name">
+          <property name="geometry">
+           <rect>
+            <x>170</x>
+            <y>30</y>
+            <width>141</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lbl_robot_logger_format">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>60</y>
+            <width>751</width>
+            <height>18</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+           </font>
+          </property>
+          <property name="text">
+           <string>Logger Format:</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="cb_robot_log_level">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>30</y>
+            <width>141</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="editable">
+           <bool>false</bool>
+          </property>
+          <property name="placeholderText">
+           <string/>
+          </property>
+          <item>
+           <property name="text">
+            <string>Info</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Warning</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Error</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Debug</string>
+           </property>
+          </item>
+         </widget>
+         <widget class="QLineEdit" name="txt_robot_log_format">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>80</y>
+            <width>751</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lbl_robot_log_level">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>141</width>
+            <height>18</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+           </font>
+          </property>
+          <property name="text">
+           <string>Log Level:</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_axis_settings">
+       <attribute name="title">
+        <string>Axis Settings</string>
+       </attribute>
+       <widget class="QTabWidget" name="tabAxis">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>10</y>
+          <width>771</width>
+          <height>391</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="tabPosition">
+         <enum>QTabWidget::North</enum>
+        </property>
+        <property name="currentIndex">
+         <number>-1</number>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_TCP">
+       <attribute name="title">
+        <string>Communication</string>
+       </attribute>
+       <widget class="QTabWidget" name="tab_communication">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>10</y>
+          <width>781</width>
+          <height>391</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>8</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="tab_webserver">
+         <attribute name="title">
+          <string>Webserver</string>
+         </attribute>
+         <widget class="QToolBox" name="toolbox_tcp">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>10</y>
+            <width>771</width>
+            <height>351</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>8</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QToolBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+
+}
+   QToolBox::tab {
+            background: blue;
+            border-radius: 5px;
+            color: black;
+        }
+
+QToolBox::tab {
+  background: #56576c; 
+ border: 1px solid #32414B;
+  padding:1px;
+  color: white;
+} 
+
+QToolBox::tab:selected { 
+  background: rgb(4, 163, 221); 
+  margin-bottom: -1px; 
+}</string>
+          </property>
+          <property name="currentIndex">
+           <number>1</number>
+          </property>
+          <widget class="QWidget" name="page_tcp_general_settings">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>100</width>
+             <height>30</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>General Settings</string>
+           </attribute>
+           <widget class="QLabel" name="lbl_tcp_robot_name">
+            <property name="geometry">
+             <rect>
+              <x>80</x>
+              <y>10</y>
+              <width>261</width>
+              <height>18</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
+            <property name="text">
+             <string>Webserver Robot Name:</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="lbl_tcp_id">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>10</y>
+              <width>111</width>
+              <height>18</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
+            <property name="text">
+             <string>ID:</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="txt_tcp_robot_name">
+            <property name="geometry">
+             <rect>
+              <x>80</x>
+              <y>30</y>
+              <width>261</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="chk_tcp_enable">
+            <property name="geometry">
+             <rect>
+              <x>360</x>
+              <y>30</y>
+              <width>161</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>-1</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>Enable Webserver</string>
+            </property>
+           </widget>
+           <widget class="QSpinBox" name="nbr_tcp_id">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>30</y>
+              <width>51</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="maximum">
+             <number>69000</number>
+            </property>
+            <property name="value">
+             <number>0</number>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="page_tcp_connection_settings">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>771</width>
+             <height>270</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>Connection Settings</string>
+           </attribute>
+           <widget class="QLabel" name="lbl_tcp_port">
+            <property name="geometry">
+             <rect>
+              <x>180</x>
+              <y>60</y>
+              <width>131</width>
+              <height>18</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
+            <property name="text">
+             <string>Port:</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="lbl_tcp_ipAdr">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>60</y>
+              <width>131</width>
+              <height>18</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
+            <property name="text">
+             <string>IP Address:</string>
+            </property>
+           </widget>
+           <widget class="QSpinBox" name="nbr_tcp_port">
+            <property name="geometry">
+             <rect>
+              <x>180</x>
+              <y>80</y>
+              <width>131</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <kerning>true</kerning>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="maximum">
+             <number>69000</number>
+            </property>
+            <property name="value">
+             <number>0</number>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="txt_tcp_ipAdr">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>80</y>
+              <width>131</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="inputMask">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="lbl_tcp_server_route">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>110</y>
+              <width>501</width>
+              <height>18</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
+            <property name="text">
+             <string>Server Route:</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="txt_tcp_server_route">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>130</y>
+              <width>501</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="btn_open_server_files_path">
+            <property name="geometry">
+             <rect>
+              <x>610</x>
+              <y>180</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>-1</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>Open Folder</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../../../../../../../.designer/img/open_folder.png</normaloff>../../../../../../../.designer/img/open_folder.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>16</width>
+              <height>16</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QLabel" name="lbl_tcp_server_files_path">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>160</y>
+              <width>591</width>
+              <height>18</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
+            <property name="text">
+             <string>Server Files Path:</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="txt_tcp_server_files_path">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>180</y>
+              <width>591</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+           <widget class="QDoubleSpinBox" name="nbr_tcp_broadcast_freq">
+            <property name="geometry">
+             <rect>
+              <x>350</x>
+              <y>80</y>
+              <width>161</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="singleStep">
+             <double>0.010000000000000</double>
+            </property>
+           </widget>
+           <widget class="QLabel" name="lbl_tcp_broadcast_freq">
+            <property name="geometry">
+             <rect>
+              <x>350</x>
+              <y>60</y>
+              <width>161</width>
+              <height>18</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
+            <property name="text">
+             <string>Broadcast Frequency [ms]:</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="cb_tcp_networkadapter">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>30</y>
+              <width>501</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="editable">
+             <bool>false</bool>
+            </property>
+            <property name="placeholderText">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QLabel" name="lbl_ctp_networkadapter">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>10</y>
+              <width>501</width>
+              <height>18</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
+            <property name="text">
+             <string>Networkadapter:</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="btn_webserver_restart">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>220</y>
+              <width>221</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>-1</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>Restart Webserver</string>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>16</width>
+              <height>16</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QLabel" name="ico_tcp_ip_error">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>80</y>
+              <width>20</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>Adapter in DataBase does not exist on this System, choose another one!</string>
+            </property>
+            <property name="toolTipDuration">
+             <number>-1</number>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLabel" name="ico_tcp_port_error">
+            <property name="geometry">
+             <rect>
+              <x>320</x>
+              <y>80</y>
+              <width>20</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>Adapter in DataBase does not exist on this System, choose another one!</string>
+            </property>
+            <property name="toolTipDuration">
+             <number>-1</number>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLabel" name="ico_tcp_adapter_error">
+            <property name="geometry">
+             <rect>
+              <x>520</x>
+              <y>30</y>
+              <width>20</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>Adapter in DataBase does not exist on this System, choose another one!</string>
+            </property>
+            <property name="toolTipDuration">
+             <number>-1</number>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="page_webserver_logger_settings">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>100</width>
+             <height>30</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>Logger Settings</string>
+           </attribute>
+           <widget class="QLabel" name="lbl_tcp_webserver_log_level">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>10</y>
+              <width>161</width>
+              <height>18</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>8</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>linrob Webserver Log Level:</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="cb_tcp_webserver_log_level">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>30</y>
+              <width>161</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="editable">
+             <bool>false</bool>
+            </property>
+            <property name="placeholderText">
+             <string/>
+            </property>
+            <item>
+             <property name="text">
+              <string>Info</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Warning</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Error</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Debug</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QComboBox" name="cb_tcp_asyncIO_log_level">
+            <property name="geometry">
+             <rect>
+              <x>190</x>
+              <y>30</y>
+              <width>161</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="editable">
+             <bool>false</bool>
+            </property>
+            <property name="placeholderText">
+             <string/>
+            </property>
+            <item>
+             <property name="text">
+              <string>Info</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Warning</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Error</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Debug</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QLabel" name="lbl_tcp_asynIO_log_level">
+            <property name="geometry">
+             <rect>
+              <x>190</x>
+              <y>10</y>
+              <width>161</width>
+              <height>18</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
+            <property name="text">
+             <string>AsyncIO Log Level:</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="lbl_tcp_socketIO_log_level">
+            <property name="geometry">
+             <rect>
+              <x>370</x>
+              <y>10</y>
+              <width>161</width>
+              <height>18</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
+            <property name="text">
+             <string>SocketIO Log Level:</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="cb_tcp_socketIO_log_level">
+            <property name="geometry">
+             <rect>
+              <x>370</x>
+              <y>30</y>
+              <width>161</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="editable">
+             <bool>false</bool>
+            </property>
+            <property name="placeholderText">
+             <string/>
+            </property>
+            <item>
+             <property name="text">
+              <string>Info</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Warning</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Error</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Debug</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QComboBox" name="cb_tcp_engineIO_log_level">
+            <property name="geometry">
+             <rect>
+              <x>550</x>
+              <y>30</y>
+              <width>161</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="editable">
+             <bool>false</bool>
+            </property>
+            <property name="placeholderText">
+             <string/>
+            </property>
+            <item>
+             <property name="text">
+              <string>Info</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Warning</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Error</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Debug</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QLabel" name="lbl_tcp_engineIO_log_level">
+            <property name="geometry">
+             <rect>
+              <x>550</x>
+              <y>10</y>
+              <width>161</width>
+              <height>18</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
+            <property name="text">
+             <string>EngineIO Log Level:</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="cb_tcp_websocket_log_level">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>80</y>
+              <width>161</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="editable">
+             <bool>false</bool>
+            </property>
+            <property name="placeholderText">
+             <string/>
+            </property>
+            <item>
+             <property name="text">
+              <string>Info</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Warning</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Error</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Debug</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QLabel" name="lbl_tcp_websocket_log_level">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>60</y>
+              <width>161</width>
+              <height>18</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
+            <property name="text">
+             <string>Websocket Log Level:</string>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab_tcp_ip">
+         <attribute name="title">
+          <string>TCP Socket</string>
+         </attribute>
+         <widget class="QTabWidget" name="tcp_socket_tab">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>10</y>
+            <width>781</width>
+            <height>351</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>8</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="tab_tcp_socket_server">
+           <attribute name="title">
+            <string>Server</string>
+           </attribute>
+           <widget class="QToolBox" name="toolbox_tcp_2">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>10</y>
+              <width>781</width>
+              <height>311</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>8</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="page_tcp_general_settings_3">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>781</width>
+               <height>230</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>General Settings</string>
+             </attribute>
+             <widget class="QLabel" name="lbl_socket_server_id">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>51</width>
+                <height>18</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="text">
+               <string>ID:</string>
+              </property>
+             </widget>
+             <widget class="QCheckBox" name="chk_socket_server_enable">
+              <property name="geometry">
+               <rect>
+                <x>70</x>
+                <y>30</y>
+                <width>161</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>-1</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="text">
+               <string>Enable TCP Socket Server</string>
+              </property>
+             </widget>
+             <widget class="QSpinBox" name="nbr_socket_server_id">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>30</y>
+                <width>51</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="maximum">
+               <number>69000</number>
+              </property>
+              <property name="value">
+               <number>0</number>
+              </property>
+             </widget>
+             <widget class="QPlainTextEdit" name="txt_socket_server_log">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>70</y>
+                <width>761</width>
+                <height>151</height>
+               </rect>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>8</pointsize>
+                <weight>50</weight>
+                <italic>false</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="tabletTracking">
+               <bool>true</bool>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::Panel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Plain</enum>
+              </property>
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+              <property name="plainText">
+               <string notr="true"/>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="page_tcp_connection_settings_3">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>Connection Settings</string>
+             </attribute>
+             <widget class="QLabel" name="lbl_socket_server_port">
+              <property name="geometry">
+               <rect>
+                <x>180</x>
+                <y>10</y>
+                <width>131</width>
+                <height>18</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="text">
+               <string>Port:</string>
+              </property>
+             </widget>
+             <widget class="QLabel" name="lbl_socket_server_ipAdr">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>131</width>
+                <height>18</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="text">
+               <string>IP Address:</string>
+              </property>
+             </widget>
+             <widget class="QSpinBox" name="nbr_socket_server_port">
+              <property name="geometry">
+               <rect>
+                <x>180</x>
+                <y>30</y>
+                <width>131</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="maximum">
+               <number>69000</number>
+              </property>
+              <property name="value">
+               <number>0</number>
+              </property>
+             </widget>
+             <widget class="QLineEdit" name="txt_socket_server_ipAdr">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>30</y>
+                <width>131</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="inputMask">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+             <widget class="QDoubleSpinBox" name="nbr_socket_server_broadcast_freq">
+              <property name="geometry">
+               <rect>
+                <x>350</x>
+                <y>30</y>
+                <width>161</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="singleStep">
+               <double>0.010000000000000</double>
+              </property>
+             </widget>
+             <widget class="QLabel" name="lbl_socket_server_broadcast_freq">
+              <property name="geometry">
+               <rect>
+                <x>350</x>
+                <y>10</y>
+                <width>161</width>
+                <height>18</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="text">
+               <string>Broadcast Frequency [ms]:</string>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="btn_webserver_restart_3">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>180</y>
+                <width>221</width>
+                <height>31</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>-1</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="text">
+               <string>Restart Socket TCP Server</string>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>16</width>
+                <height>16</height>
+               </size>
+              </property>
+             </widget>
+             <widget class="QLabel" name="ico_tcp_ip_error_3">
+              <property name="geometry">
+               <rect>
+                <x>150</x>
+                <y>80</y>
+                <width>20</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="toolTip">
+               <string>Adapter in DataBase does not exist on this System, choose another one!</string>
+              </property>
+              <property name="toolTipDuration">
+               <number>-1</number>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+             <widget class="QLabel" name="ico_tcp_port_error_3">
+              <property name="geometry">
+               <rect>
+                <x>320</x>
+                <y>80</y>
+                <width>20</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="toolTip">
+               <string>Adapter in DataBase does not exist on this System, choose another one!</string>
+              </property>
+              <property name="toolTipDuration">
+               <number>-1</number>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="page_webserver_logger_settings_3">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>Logger Settings</string>
+             </attribute>
+             <widget class="QComboBox" name="cb_socket_server_log_level">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>30</y>
+                <width>161</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>8</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="editable">
+               <bool>false</bool>
+              </property>
+              <property name="placeholderText">
+               <string/>
+              </property>
+              <item>
+               <property name="text">
+                <string>Info</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Warning</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Error</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Debug</string>
+               </property>
+              </item>
+             </widget>
+             <widget class="QLabel" name="lbl_socket_server_log_level">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>161</width>
+                <height>18</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="text">
+               <string>TCP Socket Server Log Level:</string>
+              </property>
+             </widget>
+            </widget>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="tab_tcp_socket_client">
+           <attribute name="title">
+            <string>Client</string>
+           </attribute>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab_4">
+         <attribute name="title">
+          <string>EtherCAT</string>
+         </attribute>
+        </widget>
+        <widget class="QWidget" name="tab_5">
+         <attribute name="title">
+          <string>EtherNET</string>
+         </attribute>
+        </widget>
+        <widget class="QWidget" name="tab_2">
+         <attribute name="title">
+          <string>Modbus TCP</string>
+         </attribute>
+        </widget>
+        <widget class="QWidget" name="tab_6">
+         <attribute name="title">
+          <string>FTP</string>
+         </attribute>
+         <widget class="QTabWidget" name="ftp_tab">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>10</y>
+            <width>781</width>
+            <height>351</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>8</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="tab_ftp_server">
+           <attribute name="title">
+            <string>Server</string>
+           </attribute>
+           <widget class="QToolBox" name="toolbox_ftp">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>10</y>
+              <width>771</width>
+              <height>311</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>8</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QToolBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+}
+   QToolBox::tab {
+            background: blue;
+            border-radius: 5px;
+            color: black;
+        }
+
+QToolBox::tab {
+  background: #56576c; 
+  border: 1px solid #32414B;
+  padding:1px;
+  color: white;
+} 
+
+QToolBox::tab:selected { 
+  background: rgb(4, 163, 221); 
+  margin-bottom: -1px; 
+}</string>
+            </property>
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="page_ftp_general_settings">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>771</width>
+               <height>230</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>General Settings</string>
+             </attribute>
+             <widget class="QLabel" name="lbl_ftp_id">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>51</width>
+                <height>18</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="text">
+               <string>ID:</string>
+              </property>
+             </widget>
+             <widget class="QCheckBox" name="chk_ftp_enable">
+              <property name="geometry">
+               <rect>
+                <x>80</x>
+                <y>30</y>
+                <width>161</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>-1</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">
+/*-----QCheckBox-----*/
+QCheckBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 10px;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+
+}
+
+
+/*-----QCheckBox-----*/
+QCheckBox::indicator
+{
+    color: #b1b1b1;
+    background-color: #323232;
+    border: 1px solid darkgray;
+    width: 12px;
+    height: 12px;
+
+}
+
+
+QCheckBox::indicator:checked
+{
+    image:url(&quot;./ressources/check.png&quot;);
+	background-color:  rgb(170, 255, 127);
+    border: 1px solid rgb(170, 255, 127);
+
+}
+
+QCheckBox::indicator:unchecked
+{
+    image:url(&quot;./ressources/check.png&quot;);
+	background-color: rgb(255, 116, 116);
+    border: 1px solid rgb(255, 116, 116);
+
+}
+
+
+
+</string>
+              </property>
+              <property name="text">
+               <string>FTP Server Enabled</string>
+              </property>
+             </widget>
+             <widget class="QLabel" name="lbl_ftp_username">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>60</y>
+                <width>161</width>
+                <height>18</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="text">
+               <string>FTP Username:</string>
+              </property>
+             </widget>
+             <widget class="QLineEdit" name="txt_ftp_username">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>80</y>
+                <width>161</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>-1</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLineEdit
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 13px;
+ border: 1px solid #32414B;
+}</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+             <widget class="QLabel" name="lbl_ftp_password">
+              <property name="geometry">
+               <rect>
+                <x>190</x>
+                <y>60</y>
+                <width>261</width>
+                <height>18</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="text">
+               <string>FTP Password:</string>
+              </property>
+             </widget>
+             <widget class="QLineEdit" name="txt_ftp_password">
+              <property name="geometry">
+               <rect>
+                <x>190</x>
+                <y>80</y>
+                <width>261</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>-1</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLineEdit
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 13px;
+ border: 1px solid #32414B;
+}</string>
+              </property>
+              <property name="text">
+               <string>aaa</string>
+              </property>
+              <property name="echoMode">
+               <enum>QLineEdit::PasswordEchoOnEdit</enum>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+             <widget class="QSpinBox" name="nbr_ftp_id">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>30</y>
+                <width>51</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>-1</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QSpinBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 13px;
+ border: 1px solid #32414B;
+}</string>
+              </property>
+              <property name="maximum">
+               <number>69000</number>
+              </property>
+              <property name="value">
+               <number>0</number>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="page_ftp_connection_settings">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>Connection Settings</string>
+             </attribute>
+             <widget class="QLabel" name="lbl_tcp_port_3">
+              <property name="geometry">
+               <rect>
+                <x>210</x>
+                <y>10</y>
+                <width>81</width>
+                <height>18</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="text">
+               <string>FTP Port:</string>
+              </property>
+             </widget>
+             <widget class="QLabel" name="lbl_tcp_ipAdr_3">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>161</width>
+                <height>18</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="text">
+               <string>FTP IP Address:</string>
+              </property>
+             </widget>
+             <widget class="QSpinBox" name="nbr_ftp_port">
+              <property name="geometry">
+               <rect>
+                <x>210</x>
+                <y>30</y>
+                <width>81</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>-1</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QSpinBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 13px;
+ border: 1px solid #32414B;
+}</string>
+              </property>
+              <property name="maximum">
+               <number>69000</number>
+              </property>
+              <property name="value">
+               <number>0</number>
+              </property>
+             </widget>
+             <widget class="QLineEdit" name="txt_ftp_ipAdr">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>30</y>
+                <width>161</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>-1</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">/*-----QLabel-----*/
+QLineEdit
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 13px;
+ border: 1px solid #32414B;
+}</string>
+              </property>
+              <property name="inputMask">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="btn_open_ftp_directory">
+              <property name="geometry">
+               <rect>
+                <x>550</x>
+                <y>80</y>
+                <width>111</width>
+                <height>21</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>-1</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">/*-----QPushButton-----*/
+QPushButton
+{
+	background-color: rgb(4, 163, 221);
+	color: #fff;
+	font-size: 11px;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	padding: 5px;
+
+}
+
+
+QPushButton::pressed
+{
+	background-color: rgb(3, 115, 213);
+
+}</string>
+              </property>
+              <property name="text">
+               <string>Open Folder</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../../../../../../../.designer/img/open_folder.png</normaloff>../../../../../../../.designer/img/open_folder.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>16</width>
+                <height>16</height>
+               </size>
+              </property>
+             </widget>
+             <widget class="QLabel" name="lbl_ftp_directory">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>60</y>
+                <width>531</width>
+                <height>18</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="text">
+               <string>FTP Directory:</string>
+              </property>
+             </widget>
+             <widget class="QLineEdit" name="txt_ftp_directory">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>80</y>
+                <width>531</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>-1</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLineEdit
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 13px;
+ border: 1px solid #32414B;
+}</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="btn_ftpServer_restart">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>180</y>
+                <width>221</width>
+                <height>31</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>-1</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">/*-----QPushButton-----*/
+QPushButton
+{
+	background-color: rgb(4, 163, 221);
+	color: #fff;
+	font-size: 11px;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	padding: 5px;
+
+}
+
+
+QPushButton::pressed
+{
+	background-color: rgb(3, 115, 213);
+
+}</string>
+              </property>
+              <property name="text">
+               <string>Restart FTP Server</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../../../../../../../.designer/img/open_folder.png</normaloff>../../../../../../../.designer/img/open_folder.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>16</width>
+                <height>16</height>
+               </size>
+              </property>
+             </widget>
+             <widget class="QLabel" name="ico_ftp_ip_error">
+              <property name="geometry">
+               <rect>
+                <x>180</x>
+                <y>30</y>
+                <width>20</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="toolTip">
+               <string>Adapter in DataBase does not exist on this System, choose another one!</string>
+              </property>
+              <property name="toolTipDuration">
+               <number>-1</number>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+             <widget class="QLabel" name="ico_ftp_port_error">
+              <property name="geometry">
+               <rect>
+                <x>300</x>
+                <y>30</y>
+                <width>20</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="toolTip">
+               <string>Adapter in DataBase does not exist on this System, choose another one!</string>
+              </property>
+              <property name="toolTipDuration">
+               <number>-1</number>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="page_ftp_logger_settings">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>Logger Settings</string>
+             </attribute>
+             <widget class="QComboBox" name="cb_ftp_log_level">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>30</y>
+                <width>161</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="editable">
+               <bool>false</bool>
+              </property>
+              <property name="placeholderText">
+               <string/>
+              </property>
+              <item>
+               <property name="text">
+                <string>Info</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Warning</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Error</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Debug</string>
+               </property>
+              </item>
+             </widget>
+             <widget class="QLabel" name="lbl_ftp_log_level">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>161</width>
+                <height>18</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="text">
+               <string>Log Level:</string>
+              </property>
+             </widget>
+            </widget>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="tab_ftp_client">
+           <attribute name="title">
+            <string>Client</string>
+           </attribute>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab">
+         <attribute name="title">
+          <string>XML-RPC</string>
+         </attribute>
+         <widget class="QTabWidget" name="tab_xml_rpc">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>10</y>
+            <width>781</width>
+            <height>351</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>8</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="tab_xmlrpc_server">
+           <attribute name="title">
+            <string>Server</string>
+           </attribute>
+           <widget class="QToolBox" name="toolbox_xmlrpc">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>10</y>
+              <width>771</width>
+              <height>311</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>8</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QToolBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+}
+   QToolBox::tab {
+            background: blue;
+            border-radius: 5px;
+            color: black;
+        }
+
+QToolBox::tab {
+  background: #56576c; 
+  border: 1px solid #32414B;
+  padding:1px;
+  color: white;
+} 
+
+QToolBox::tab:selected { 
+  background: rgb(4, 163, 221); 
+  margin-bottom: -1px; 
+}</string>
+            </property>
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="page_xmlrpc_general_settings">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>771</width>
+               <height>230</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>General Settings</string>
+             </attribute>
+             <widget class="QLabel" name="lbl_xmlrpc_id">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>51</width>
+                <height>18</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="text">
+               <string>ID:</string>
+              </property>
+             </widget>
+             <widget class="QCheckBox" name="chk_xmlrpc_enabled">
+              <property name="geometry">
+               <rect>
+                <x>80</x>
+                <y>30</y>
+                <width>161</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>-1</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">
+/*-----QCheckBox-----*/
+QCheckBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 10px;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+
+}
+
+
+/*-----QCheckBox-----*/
+QCheckBox::indicator
+{
+    color: #b1b1b1;
+    background-color: #323232;
+    border: 1px solid darkgray;
+    width: 12px;
+    height: 12px;
+
+}
+
+
+QCheckBox::indicator:checked
+{
+    image:url(&quot;./ressources/check.png&quot;);
+	background-color:  rgb(170, 255, 127);
+    border: 1px solid rgb(170, 255, 127);
+
+}
+
+QCheckBox::indicator:unchecked
+{
+    image:url(&quot;./ressources/check.png&quot;);
+	background-color: rgb(255, 116, 116);
+    border: 1px solid rgb(255, 116, 116);
+
+}
+
+
+
+</string>
+              </property>
+              <property name="text">
+               <string>XMLRPC Server Enabled</string>
+              </property>
+             </widget>
+             <widget class="QSpinBox" name="nbr_xmlrpc_id">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>30</y>
+                <width>51</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>-1</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QSpinBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 13px;
+ border: 1px solid #32414B;
+}</string>
+              </property>
+              <property name="maximum">
+               <number>69000</number>
+              </property>
+              <property name="value">
+               <number>0</number>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="page_xmlrpc_con_settings">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>Connection Settings</string>
+             </attribute>
+             <widget class="QLabel" name="lbl_xmlrpc_port">
+              <property name="geometry">
+               <rect>
+                <x>210</x>
+                <y>10</y>
+                <width>161</width>
+                <height>18</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="text">
+               <string>XMLRPC Port:</string>
+              </property>
+             </widget>
+             <widget class="QLabel" name="lbl_xmlrpc_ipAdr">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>161</width>
+                <height>18</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="text">
+               <string>XMLRPC IP Address:</string>
+              </property>
+             </widget>
+             <widget class="QSpinBox" name="nrb_xmlrpc_port">
+              <property name="geometry">
+               <rect>
+                <x>210</x>
+                <y>30</y>
+                <width>161</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>-1</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QSpinBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 13px;
+ border: 1px solid #32414B;
+}</string>
+              </property>
+              <property name="maximum">
+               <number>69000</number>
+              </property>
+              <property name="value">
+               <number>0</number>
+              </property>
+             </widget>
+             <widget class="QLineEdit" name="txt_xmlrpc_ipAdr">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>30</y>
+                <width>161</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>-1</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">/*-----QLabel-----*/
+QLineEdit
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 13px;
+ border: 1px solid #32414B;
+}</string>
+              </property>
+              <property name="inputMask">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="btn_xmlrpc_restart_server">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>180</y>
+                <width>221</width>
+                <height>31</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>-1</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">/*-----QPushButton-----*/
+QPushButton
+{
+	background-color: rgb(4, 163, 221);
+	color: #fff;
+	font-size: 11px;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	padding: 5px;
+
+}
+
+
+QPushButton::pressed
+{
+	background-color: rgb(3, 115, 213);
+
+}</string>
+              </property>
+              <property name="text">
+               <string>Restart XMLRPC Server</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../../../../../../../.designer/img/open_folder.png</normaloff>../../../../../../../.designer/img/open_folder.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>16</width>
+                <height>16</height>
+               </size>
+              </property>
+             </widget>
+             <widget class="QLabel" name="ico_xmlrpc_ip_error">
+              <property name="geometry">
+               <rect>
+                <x>180</x>
+                <y>30</y>
+                <width>20</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="toolTip">
+               <string>Adapter in DataBase does not exist on this System, choose another one!</string>
+              </property>
+              <property name="toolTipDuration">
+               <number>-1</number>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+             <widget class="QLabel" name="ico_xml_rpc_port_error">
+              <property name="geometry">
+               <rect>
+                <x>380</x>
+                <y>30</y>
+                <width>20</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="toolTip">
+               <string>Adapter in DataBase does not exist on this System, choose another one!</string>
+              </property>
+              <property name="toolTipDuration">
+               <number>-1</number>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="page_xmlrpc_logger_settings">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>Logger Settings</string>
+             </attribute>
+             <widget class="QComboBox" name="cb_xmlrpc_log_level">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>30</y>
+                <width>161</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="editable">
+               <bool>false</bool>
+              </property>
+              <property name="placeholderText">
+               <string/>
+              </property>
+              <item>
+               <property name="text">
+                <string>Info</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Warning</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Error</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Debug</string>
+               </property>
+              </item>
+             </widget>
+             <widget class="QLabel" name="lbl_xmlrpc">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>161</width>
+                <height>18</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="text">
+               <string>XMRPC Log Level:</string>
+              </property>
+             </widget>
+             <widget class="QCheckBox" name="chk_xmlrpc_log_requests">
+              <property name="geometry">
+               <rect>
+                <x>180</x>
+                <y>30</y>
+                <width>161</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>-1</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">
+/*-----QCheckBox-----*/
+QCheckBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 10px;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+
+}
+
+
+/*-----QCheckBox-----*/
+QCheckBox::indicator
+{
+    color: #b1b1b1;
+    background-color: #323232;
+    border: 1px solid darkgray;
+    width: 12px;
+    height: 12px;
+
+}
+
+
+QCheckBox::indicator:checked
+{
+    image:url(&quot;./ressources/check.png&quot;);
+	background-color:  rgb(170, 255, 127);
+    border: 1px solid rgb(170, 255, 127);
+
+}
+
+QCheckBox::indicator:unchecked
+{
+    image:url(&quot;./ressources/check.png&quot;);
+	background-color: rgb(255, 116, 116);
+    border: 1px solid rgb(255, 116, 116);
+
+}
+
+
+
+</string>
+              </property>
+              <property name="text">
+               <string>Log Requests</string>
+              </property>
+             </widget>
+            </widget>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="tab_xmlrpc_client">
+           <attribute name="title">
+            <string>Client</string>
+           </attribute>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab_8">
+         <attribute name="title">
+          <string>RTDE</string>
+         </attribute>
+         <widget class="QTabWidget" name="rtde_tab">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>10</y>
+            <width>781</width>
+            <height>351</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>8</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="tab_rtde_server">
+           <attribute name="title">
+            <string>Server</string>
+           </attribute>
+           <widget class="QToolBox" name="toolbox_rtde">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>10</y>
+              <width>771</width>
+              <height>311</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>8</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QToolBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+}
+   QToolBox::tab {
+            background: blue;
+            border-radius: 5px;
+            color: black;
+        }
+
+QToolBox::tab {
+  background: #56576c; 
+  border: 1px solid #32414B;
+  padding:1px;
+  color: white;
+} 
+
+QToolBox::tab:selected { 
+  background: rgb(4, 163, 221); 
+  margin-bottom: -1px; 
+}</string>
+            </property>
+            <property name="currentIndex">
+             <number>2</number>
+            </property>
+            <widget class="QWidget" name="page_rtde_general_settings">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>General Settings</string>
+             </attribute>
+             <widget class="QLabel" name="lbl_rtde_id">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>51</width>
+                <height>18</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="text">
+               <string>ID:</string>
+              </property>
+             </widget>
+             <widget class="QCheckBox" name="chk_rtde_client_enable">
+              <property name="geometry">
+               <rect>
+                <x>80</x>
+                <y>30</y>
+                <width>161</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>-1</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">
+/*-----QCheckBox-----*/
+QCheckBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 10px;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+
+}
+
+
+/*-----QCheckBox-----*/
+QCheckBox::indicator
+{
+    color: #b1b1b1;
+    background-color: #323232;
+    border: 1px solid darkgray;
+    width: 12px;
+    height: 12px;
+
+}
+
+
+QCheckBox::indicator:checked
+{
+    image:url(&quot;./ressources/check.png&quot;);
+	background-color:  rgb(170, 255, 127);
+    border: 1px solid rgb(170, 255, 127);
+
+}
+
+QCheckBox::indicator:unchecked
+{
+    image:url(&quot;./ressources/check.png&quot;);
+	background-color: rgb(255, 116, 116);
+    border: 1px solid rgb(255, 116, 116);
+
+}
+
+
+
+</string>
+              </property>
+              <property name="text">
+               <string>Enable RTDE Client</string>
+              </property>
+             </widget>
+             <widget class="QSpinBox" name="nbr_rtde_id">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>30</y>
+                <width>51</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>-1</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QSpinBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 13px;
+ border: 1px solid #32414B;
+}</string>
+              </property>
+              <property name="maximum">
+               <number>69000</number>
+              </property>
+              <property name="value">
+               <number>0</number>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="page_rtde_con_settings">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>Connection Settings</string>
+             </attribute>
+             <widget class="QLabel" name="lbl_rtde_port">
+              <property name="geometry">
+               <rect>
+                <x>210</x>
+                <y>10</y>
+                <width>151</width>
+                <height>18</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="text">
+               <string>RTDE Port:</string>
+              </property>
+             </widget>
+             <widget class="QLabel" name="lbl_rtde_ipAdr">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>161</width>
+                <height>18</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="text">
+               <string>Universal Robot IP Address:</string>
+              </property>
+             </widget>
+             <widget class="QSpinBox" name="nbr_rtde_port">
+              <property name="geometry">
+               <rect>
+                <x>210</x>
+                <y>30</y>
+                <width>161</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>-1</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QSpinBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 13px;
+ border: 1px solid #32414B;
+}</string>
+              </property>
+              <property name="maximum">
+               <number>69000</number>
+              </property>
+              <property name="value">
+               <number>0</number>
+              </property>
+             </widget>
+             <widget class="QLineEdit" name="txt_rtde_ipAdr">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>30</y>
+                <width>161</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>-1</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">/*-----QLabel-----*/
+QLineEdit
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 13px;
+ border: 1px solid #32414B;
+}</string>
+              </property>
+              <property name="inputMask">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+             <widget class="QLabel" name="lbl_rtde_config_file">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>60</y>
+                <width>761</width>
+                <height>18</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="text">
+               <string>Universal Robot RTDE Config File:</string>
+              </property>
+             </widget>
+             <widget class="QLabel" name="lbl_rtde_data_poll_freq">
+              <property name="geometry">
+               <rect>
+                <x>410</x>
+                <y>10</y>
+                <width>161</width>
+                <height>18</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="text">
+               <string>Data Poll Frequency [ms]:</string>
+              </property>
+             </widget>
+             <widget class="QDoubleSpinBox" name="nbr_rtde_data_poll_freq">
+              <property name="geometry">
+               <rect>
+                <x>410</x>
+                <y>30</y>
+                <width>161</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>-1</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QDoubleSpinBox
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 13px;
+ border: 1px solid #32414B;
+}</string>
+              </property>
+              <property name="decimals">
+               <number>3</number>
+              </property>
+              <property name="singleStep">
+               <double>0.010000000000000</double>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="btn_rtde_restart">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>180</y>
+                <width>221</width>
+                <height>31</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>-1</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">/*-----QPushButton-----*/
+QPushButton
+{
+	background-color: rgb(4, 163, 221);
+	color: #fff;
+	font-size: 11px;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	padding: 5px;
+
+}
+
+
+QPushButton::pressed
+{
+	background-color: rgb(3, 115, 213);
+
+}</string>
+              </property>
+              <property name="text">
+               <string>Restart RTDE</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../../../../../../../.designer/img/open_folder.png</normaloff>../../../../../../../.designer/img/open_folder.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>16</width>
+                <height>16</height>
+               </size>
+              </property>
+             </widget>
+             <widget class="QComboBox" name="cb_rtde_config_file">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>80</y>
+                <width>761</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="editable">
+               <bool>false</bool>
+              </property>
+              <property name="placeholderText">
+               <string/>
+              </property>
+             </widget>
+             <widget class="QLabel" name="ico_rtde_ip_error">
+              <property name="geometry">
+               <rect>
+                <x>180</x>
+                <y>30</y>
+                <width>20</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="toolTip">
+               <string>Adapter in DataBase does not exist on this System, choose another one!</string>
+              </property>
+              <property name="toolTipDuration">
+               <number>-1</number>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+             <widget class="QLabel" name="ico_rtde_port_error">
+              <property name="geometry">
+               <rect>
+                <x>380</x>
+                <y>30</y>
+                <width>20</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="toolTip">
+               <string>Adapter in DataBase does not exist on this System, choose another one!</string>
+              </property>
+              <property name="toolTipDuration">
+               <number>-1</number>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="page_rtde_logger_settings">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>771</width>
+               <height>230</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>Logger Settings</string>
+             </attribute>
+             <widget class="QComboBox" name="cb_rtde_log_level">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>30</y>
+                <width>161</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="editable">
+               <bool>false</bool>
+              </property>
+              <property name="placeholderText">
+               <string/>
+              </property>
+              <item>
+               <property name="text">
+                <string>Info</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Warning</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Error</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Debug</string>
+               </property>
+              </item>
+             </widget>
+             <widget class="QLabel" name="lbl_rtde_log_level">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>161</width>
+                <height>18</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+               </font>
+              </property>
+              <property name="text">
+               <string>RTDE Client Log Level:</string>
+              </property>
+             </widget>
+            </widget>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="tab_rtde_client">
+           <attribute name="title">
+            <string>Client</string>
+           </attribute>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab_roboDK">
+         <attribute name="title">
+          <string>RoboDK</string>
+         </attribute>
+        </widget>
+        <widget class="QWidget" name="tab_unity">
+         <attribute name="title">
+          <string>Unity</string>
+         </attribute>
+        </widget>
+        <widget class="QWidget" name="tab_io">
+         <attribute name="title">
+          <string>I/O</string>
+         </attribute>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_user_management">
+       <attribute name="title">
+        <string>User Management</string>
+       </attribute>
+       <widget class="QLabel" name="lbl_user_mgr_new_user_password">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>70</y>
+          <width>371</width>
+          <height>18</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>New Password:</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="cb_user_mgr_usernames">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>40</y>
+          <width>371</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="editable">
+         <bool>false</bool>
+        </property>
+        <property name="placeholderText">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="txt_user_mgr_new_password">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>90</y>
+          <width>371</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 13px;
+ border: 1px solid #32414B;
+}</string>
+        </property>
+        <property name="text">
+         <string>aaa</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::PasswordEchoOnEdit</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_user_mgr_usernames">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>20</y>
+          <width>371</width>
+          <height>18</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>Username:</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_user_mgr_change_user_password">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>190</y>
+          <width>371</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>-1</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*-----QPushButton-----*/
+QPushButton
+{
+	background-color: rgb(4, 163, 221);
+	color: #fff;
+	font-size: 11px;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	padding: 5px;
+
+}
+
+
+QPushButton::pressed
+{
+	background-color: rgb(3, 115, 213);
+
+}</string>
+        </property>
+        <property name="text">
+         <string>Change Password</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_user_mgr_add_new_user">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>220</y>
+          <width>371</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>-1</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*-----QPushButton-----*/
+QPushButton
+{
+	background-color: rgb(4, 163, 221);
+	color: #fff;
+	font-size: 11px;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	padding: 5px;
+
+}
+
+
+QPushButton::pressed
+{
+	background-color: rgb(3, 115, 213);
+
+}</string>
+        </property>
+        <property name="text">
+         <string>Add User</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_user_mgr_delete_user">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>220</y>
+          <width>371</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>-1</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*-----QPushButton-----*/
+QPushButton
+{
+	background-color: rgb(4, 163, 221);
+	color: #fff;
+	font-size: 11px;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	padding: 5px;
+
+}
+
+
+QPushButton::pressed
+{
+	background-color: rgb(3, 115, 213);
+
+}</string>
+        </property>
+        <property name="text">
+         <string>Delete User</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_user_mgr_role">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>70</y>
+          <width>371</width>
+          <height>18</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>User Role:</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="cb_user_mgr_add_user_role">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>90</y>
+          <width>371</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="editable">
+         <bool>false</bool>
+        </property>
+        <property name="placeholderText">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_user_mgr_add_username">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>20</y>
+          <width>371</width>
+          <height>18</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>New Username:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="txt_user_mgr_add_password">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>140</y>
+          <width>371</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 13px;
+ border: 1px solid #32414B;
+}</string>
+        </property>
+        <property name="text">
+         <string>aaa</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::PasswordEchoOnEdit</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_user_mgr_add_password">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>120</y>
+          <width>371</width>
+          <height>18</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>Password:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="txt_user_mgr_add_username">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>40</y>
+          <width>371</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*-----QLabel-----*/
+QLineEdit
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 13px;
+ border: 1px solid #32414B;
+}</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_user_mgr_new_user_password_again">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>120</y>
+          <width>371</width>
+          <height>18</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>New Password again:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="txt_user_mgr_new_password_again">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>140</y>
+          <width>371</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 13px;
+ border: 1px solid #32414B;
+}</string>
+        </property>
+        <property name="text">
+         <string>aaa</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::PasswordEchoOnEdit</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="txt_user_mgr_password_again">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>190</y>
+          <width>371</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit
+{
+	background-color: transparent;
+	color: #c2c7d5;
+	font-size: 13px;
+ border: 1px solid #32414B;
+}</string>
+        </property>
+        <property name="text">
+         <string>aaa</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::PasswordEchoOnEdit</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_user_mgr_add_password_again">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>170</y>
+          <width>371</width>
+          <height>18</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>Password again:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_user_mgr_add_hint">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>250</y>
+          <width>371</width>
+          <height>18</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+	font: 75 10pt &quot;Arial&quot;;
+	color:rgb(255, 94, 97);
+}</string>
+        </property>
+        <property name="text">
+         <string>User already exist!</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_user_mgr_change_password_hint">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>250</y>
+          <width>371</width>
+          <height>18</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+	font: 75 10pt &quot;Arial&quot;;
+	color:rgb(255, 94, 97);
+}</string>
+        </property>
+        <property name="text">
+         <string>User already exist!</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_developer">
+       <attribute name="title">
+        <string>Developer</string>
+       </attribute>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_motionCenter_settings">
+     <attribute name="title">
+      <string>MotionCenter</string>
+     </attribute>
+     <widget class="QCheckBox" name="chk_autostart_motion_center">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>161</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>-1</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Autostart MotionCenter</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_statistics">
+     <attribute name="title">
+      <string>Statistics</string>
+     </attribute>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>810</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

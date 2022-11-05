@@ -1,0 +1,40 @@
+.led-red {
+  width: 12px;
+  height: 12px;
+  background-color: #ff6060;
+  border-radius: 50%;
+  box-shadow: #ff0000 0 -1px 7px 1px, inset #d50101 0 -1px 9px, #F00 0 2px 12px;
+}
+
+.led-yellow {
+  width: 12px;
+  height: 12px;
+  background-color: #ffe500;
+  border-radius: 50%;
+  box-shadow: #aaa306 0 -1px 7px 1px, inset #660 0 -1px 9px, #DD0 0 2px 12px;
+}
+
+.led-green {
+  width: 12px;
+  height: 12px;
+  background-color: #a8fc01;
+  border-radius: 50%;
+  box-shadow: #00cc14 0 -1px 7px 1px, inset #81bf03 0 -1px 9px, #7D0 0 2px 12px;
+}
+
+.led-orange {
+  width: 12px;
+  height: 12px;
+  background-color: #f74902;
+  border-radius: 50%;
+  box-shadow: #f74902 0 -1px 7px 1px, inset #f77f00 0 -1px 9px, #f96302 0 2px 14px;
+}
+
+.led-grey {
+  width: 12px;
+  height: 12px;
+  background-color: #C0C0C0;
+  border-radius: 50%;
+  box-shadow: #a09a9a 0 -1px 7px 1px, inset #9A9 0 -1px 9px, #969 0 2px 14px;
+}
+

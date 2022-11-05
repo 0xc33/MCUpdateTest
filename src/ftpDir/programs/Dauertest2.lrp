@@ -1,0 +1,7 @@
+lr_move_l_async(axis="X-Axis", position=1000.0, velocity=70.0, acceleration=40.0, deceleration=40.00)
+lr_move_l_async(axis="Z-Axis", position=1000.0, velocity=70.0, acceleration=40.0, deceleration=40.00)
+lr_wait_for_position("X-Axis")
+
+lr_move_l_async(axis="X-Axis", position=200.0, velocity=70.0, acceleration=40.0, deceleration=40.0)
+lr_move_l_async(axis="Z-Axis", position=700.0, velocity=70.0, acceleration=40.0, deceleration=40.00)
+lr_wait_for_position("X-Axis")

@@ -1,0 +1,20 @@
+number = 1
+number23 = 5
+boolTest = True
+
+if boolTest:
+    movement_fin = lr_move_l(
+        axis="X-Axis",
+        position=200,
+        velocity=20,
+        acceleration=20,
+        deceleration=20,
+        blocking=True)
+    
+    if movement_fin == "Success":
+        print("Movement Done")
+    else:
+        print("Somethin went Wrong!")
+    
+else:
+    lr_stop_script()

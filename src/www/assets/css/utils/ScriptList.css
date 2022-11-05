@@ -1,0 +1,14 @@
+.selected {
+  background: lightgreen;
+}
+
+#item:active {
+  background-color: yellow;
+}
+
+.script-item-background {
+  color: white;
+  background-color: rgb(35,31,32);
+  border: none;
+}
+

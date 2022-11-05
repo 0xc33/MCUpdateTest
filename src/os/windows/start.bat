@@ -1,0 +1,1 @@
+wt.exe -w _quake -d C:\Users\linrob\Desktop\linrobPyLib pipenv run python main.py
